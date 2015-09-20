@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<!--
+	##################### mmark_Dreamy_opendroid v.1.3.0 ########################
+	#                                                                       #
+	#      mmark             Version 1.3.0 released          01-01-2015     #
+	#      mmark             Version 1.2.0 released          29-12-2014     #
+	#      mmark             Version 1.1.0 released          12-12-2014     #
+	#                                                                       #
+	#########################################################################
+	-->
+
+	<!-- Menu Template DRE -->
+	<screen name="MenuTemplate" >
+		<panel name="p700_Template" />
+		<panel name="p700_Date" />
+		<!-- menu list -->
+		<ePixmap position="515,70"  size="230,425" pixmap="oDreamy/menu/opendroidlogo.png"    alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="box/maxbar.png" position="511,100" size="10,495" alphatest="blend" zPosition="5" />
+		<widget source="menu" render="Listbox" position="30,100" size="491,495" zPosition="1" scrollbarMode="showOnDemand"  transparent="1"
+			foregroundColor="#707070" foregroundColorSelected="#ffffff" backgroundColor="#272e43" backgroundColorSelected="#272e43"
+			selectionPixmap="oDreamy/box/slider.png" backgroundPixmap="oDreamy/box/sliderb.png" >
+ 			<convert type="TemplatedMultiContent">
+ 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (550, 40), flags = RT_HALIGN_LEFT, text = 0)],
+ 				"fonts": [gFont("Regular", 24)],
+ 				"itemHeight": 45
+ 				}
+ 			</convert>
+ 		</widget>
+		<eLabel text="Menu" position="900,655" size="100,26" font="Regular;22" backgroundColor="#101010" foregroundColor="#808080" transparent="1" zPosition="1" />
+		<!--ePixmap position="550,440" size="300,300" pixmap="menu/missing.png" alphatest="blend" /-->
+		<ePixmap position="50,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+	</screen> 
+
+ 	<!-- Menu Icons Template DRE -->
+	<screen name="MenuIconsTemplate">
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/media_player.png"         position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">media_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/timer_edit.png"           position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/ico_ci.png"               position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">emu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/ico_ci.png"               position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">cs</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/info_screen.png"          position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/plugin_selection.png"     position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">plugin_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/ico_script.png"           position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">scripts</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/setup_selection.png"      position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/standby_restart_list.png" position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/setup_selection.png"       position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">dmc_mainmenu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/dvd_player.png"            position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">dvd_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/setup_selection.png"       position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">scart_switch</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/timer_edit.png"            position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">timer_menu</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/timer_edit.png"            position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">picshow_summary</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/startboot.png"             position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">OpendroidMainPanel_summary</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+	</screen>
+	
+	<!-- MainMenu DRE --> 
+	<screen name="menu_mainmenu" position="fill" title="Main Menu" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="MenuTemplate" />
+		<panel name="MenuIconsTemplate" />
+	</screen>
+	
+	<!-- Menu DRE -->
+	<screen name="Menu" position="fill"  title="Menu" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen> 
+       <!-- Menu Infopanel DRE -->
+	<screen name="Menu_Infopanel" position="fill"  title="Menu Infopanel" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen> 
+
+	<!-- Menu Setup DRE -->
+	<screen name="menu_setup" position="fill" title="Main Menu Setup" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+	
+	<!-- Menu Scan Channel DRE -->
+	<screen name="menu_scan" position="fill" title="Main Menu Channel Scan" backgroundColor="#FF000000" flags="wfNoBorder">
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/ico_listch.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+	
+	<!-- Menu System DRE -->
+	<screen name="menu_system" position="fill" title="Main Menu System" backgroundColor="#FF000000" flags="wfNoBorder">
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+	
+	<!-- Menu HDD DRE -->
+	<screen name="menu_harddisk" position="fill" title="Main Menu HDD" backgroundColor="#FF000000" flags="wfNoBorder">
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/ico_folder.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+	
+	<!-- Menu Information DRE -->
+	<screen name="menu_information" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/info_screen.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+	
+	<!-- Menu ShutDown DRE -->
+	<screen name="menu_shutdown" position="fill" title="Menu ShutDown" backgroundColor="#FF000000" flags="wfNoBorder">
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/standby_restart_list.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+
+	<!-- P700 Template DRE -->
+	<screen name="p700_Template" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- 700p Upper Panel -->
+		<eLabel position="35,20"    size="700,50"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,20"    size="700,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,20"    size="1,50"    backgroundColor="#101010"   zPosition="-1" />
+		<!-- Middle -->
+		<eLabel position="35,78"    size="700,545" backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,76"    size="485,5"   backgroundColor="#538eff"   zPosition="0"  />
+		<eLabel position="35,78"    size="700,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,78"    size="1,545"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,623"   size="700,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="515,621"  size="220,5"   backgroundColor="#20538eff" zPosition="0"  />
+		<!-- Footer -->
+		<eLabel position="35,633"   size="790,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,633"   size="790,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,633"   size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="830,633"  size="145,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="830,633"  size="145,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="830,633"  size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="980,633"  size="265,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="980,633"  size="265,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="980,633"  size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<!-- Code -->
+		<widget source="Title" render="Label" position="115,31" size="600,40" font="Regular;26" halign="left" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<ePixmap position="33,18" size="35,35" pixmap="oDreamy/buttons/angle30.png" alphatest="blend" zPosition="2" />
+		<ePixmap position="50,33" size="45,50" pixmap="oDreamy/icons/list.png"      alphatest="blend" zPosition="2" />
+		<!-- Clock %d.%m.%Y - %H:%M:%S -->
+		<ePixmap position="838,653" size="45,30"   pixmap="oDreamy/icons/select.png"    alphatest="blend" zPosition="2" />
+		<ePixmap position="990,650" size="35,35"   pixmap="oDreamy/icons/clock50.png"   alphatest="blend" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="970,645" size="250,40" font="Regular;38" halign="right" foregroundColor="#505050" backgroundColor="#10101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>				
+	</screen>
+
+	<!-- P700 Logo DRE -->
+	<screen name="p700_Logo" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- Logo -->
+		<ePixmap position="515,70"  size="230,425" pixmap="oDreamy/menu/opendroidlogo.png"    alphatest="blend" zPosition="1" />
+		<eLabel  position="515,99"  size="5,495" backgroundColor="#301b3c85" zPosition="2" />
+	</screen>
+
+	<!-- P700 Date DRE -->
+	<screen name="p700_Date" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="320,31" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %d %B</convert>
+		</widget>
+	</screen>
+
+	<!-- P800 Template DRE -->
+	<screen name="p800_Template" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- 800p Upper Panel -->
+		<eLabel position="35,20"    size="790,50"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,20"    size="790,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,20"    size="1,50"    backgroundColor="#101010"   zPosition="-1" />
+		<!-- Middle -->
+		<eLabel position="35,78"    size="790,545" backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,76"    size="575,5"   backgroundColor="#538eff"   zPosition="0"  />
+		<eLabel position="35,78"    size="790,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,78"    size="1,545"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,623"   size="790,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="605,621"  size="220,5"   backgroundColor="#20538eff" zPosition="0"  />
+		<!-- Footer -->
+		<eLabel position="35,633"   size="790,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,633"   size="790,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,633"   size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="830,633"  size="145,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="830,633"  size="145,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="830,633"  size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="980,633"  size="265,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="980,633"  size="265,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="980,633"  size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<!-- Code -->
+		<widget source="Title" render="Label" position="115,31" size="600,40" font="Regular;26" halign="left" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<ePixmap position="33,18" size="35,35" pixmap="oDreamy/buttons/angle30.png" alphatest="blend" zPosition="2" />
+		<ePixmap position="50,33" size="45,50" pixmap="oDreamy/icons/list.png"      alphatest="blend" zPosition="2" />
+		<!-- Clock %d.%m.%Y - %H:%M:%S -->
+		<ePixmap position="838,653" size="45,30"   pixmap="oDreamy/icons/select.png"    alphatest="blend" zPosition="2" />
+		<ePixmap position="990,650" size="35,35"   pixmap="oDreamy/icons/clock50.png"   alphatest="blend" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="990,645" size="250,40" font="Regular;38" halign="right" foregroundColor="#505050" backgroundColor="#10101010" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>				
+	</screen>
+
+	<!-- P800 Logo DRE -->
+	<screen name="p800_Logo" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- Logo -->
+		<ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<eLabel  position="605,95" size="5,510" backgroundColor="#301b3c85" zPosition="2" />
+	</screen>
+
+	<!-- P800 Extensions DRE -->
+	<screen name="p800_Ext" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<eLabel position="830,20" size="415,50"  backgroundColor="#20000000" />
+		<eLabel position="830,20" size="415,1"   backgroundColor="#20101010" />
+		<eLabel position="830,20" size="1,50"    backgroundColor="#20101010" />
+		<eLabel position="830,78" size="415,545" backgroundColor="#201b3c85" />
+	</screen>
+
+	<!-- P800 Date DRE -->
+	<screen name="p800_Date" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="420,31" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %d %B</convert>
+		</widget>
+	</screen>
+
+	<!-- P900 Template DRE -->
+	<screen name="p900_Template" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- 900p Upper Panel -->
+		<eLabel position="35,20"    size="940,50"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,20"    size="940,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,20"    size="1,50"    backgroundColor="#101010"   zPosition="-1" />
+		<!-- Middle -->
+		<eLabel position="35,78"    size="940,545" backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,76"    size="715,5"   backgroundColor="#538eff"   zPosition="0"  />
+		<eLabel position="35,78"    size="940,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,78"    size="1,545"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,623"   size="940,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="745,621"  size="230,5"   backgroundColor="#20538eff" zPosition="0"  />
+		<!-- Footer -->
+		<eLabel position="35,633"   size="790,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="35,633"   size="790,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="35,633"   size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="830,633"  size="145,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="830,633"  size="145,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="830,633"  size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="980,633"  size="265,65"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="980,633"  size="265,1"   backgroundColor="#101010"   zPosition="-1" />
+		<eLabel position="980,633"  size="1,65"    backgroundColor="#101010"   zPosition="-1" />
+		<!-- Code -->
+		<widget source="Title" render="Label" position="115,31" size="810,28" font="Regular;26" halign="left" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<ePixmap position="33,18" size="35,35" pixmap="oDreamy/buttons/angle30.png" alphatest="blend" zPosition="2" />
+		<ePixmap position="50,33" size="45,50" pixmap="oDreamy/icons/list.png"      alphatest="blend" zPosition="2" />
+		<!-- Clock %d.%m.%Y - %H:%M:%S -->
+		<ePixmap position="838,653" size="45,30"   pixmap="oDreamy/icons/select.png"    alphatest="blend" zPosition="2" />
+		<ePixmap position="990,650" size="35,35"   pixmap="oDreamy/icons/clock50.png"   alphatest="blend" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="970,645" size="250,40" font="Regular;38" halign="right" foregroundColor="#505050" backgroundColor="#10101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>				
+	</screen>
+
+	<!-- P900 Logo DRE -->
+	<screen name="p900_Logo" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- Logo -->
+		<ePixmap position="745,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<eLabel  position="745,95" size="5,510" backgroundColor="#301b3c85" zPosition="2" />
+	</screen>
+
+	<!-- P900 Date DRE -->
+	<screen name="p900_Date" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="570,31" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+	</screen>
+
+	<!-- P900 Extensions DRE -->
+	<screen name="p900_Ext" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<eLabel position="980,20" size="265,50"  backgroundColor="#20000000" />
+		<eLabel position="980,20" size="265,1"   backgroundColor="#20101010" />
+		<eLabel position="980,20" size="1,50"    backgroundColor="#20101010" />
+		<eLabel position="980,78" size="265,545" backgroundColor="#201b3c85" />
+	</screen>
+
+	<!-- Button Templates Colors Name DRE -->
+
+	<screen name="nR">
+		<!-- Keys Buttons DRE -->
+		<ePixmap position="45,658"  pixmap="oDreamy/buttons/redpanel.png"    size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="key_red" position="75,642" size="165,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+	
+	<screen name="nRG">
+		<!-- Keys Buttons DRE -->
+		<panel name="nR" />
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/greenpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="key_green"  position="265,642" size="165,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="nRGY">
+		<!-- Keys Buttons DRE -->
+		<panel name="nRG" />
+		<ePixmap position="425,658" pixmap="oDreamy/buttons/yellowpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="key_yellow" position="455,642" size="165,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="nRGYB">
+		<!-- Keys Buttons DRE -->
+		<panel name="nRGY" />
+		<ePixmap position="615,658" pixmap="oDreamy/buttons/bluepanel.png"   size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="key_blue"   position="645,642" size="165,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="nRB">
+		<!-- Keys Buttons DRE -->
+		<panel name="nR" />
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/bluepanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="key_blue"  position="265,642" size="165,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="nRGB">
+		<!-- Keys Buttons DRE -->
+		<panel name="nRG" />
+		<ePixmap position="425,658" pixmap="oDreamy/buttons/bluepanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="key_blue" position="455,642" size="165,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+	
+	<!-- Button Templates Colors NoKeyName DRE -->
+
+	<screen name="nkR">
+		<!-- Keys Buttons DRE -->
+		<ePixmap position="45,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="red" position="75,642" size="165,55" zPosition="1"  backgroundColor="header" transparent="1" />
+	</screen>
+	
+	<screen name="nkRG">
+		<!-- Keys Buttons DRE -->
+		<panel name="nkR" />
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/greenpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="green"  position="265,642" size="165,55" zPosition="1" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="nkRGY">
+		<!-- Keys Buttons DRE -->
+		<panel name="nkRG" />
+		<ePixmap position="425,658" pixmap="oDreamy/buttons/yellowpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="yellow" position="455,642" size="165,55" zPosition="1" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="nkRGYB">
+		<!-- Keys Buttons DRE -->
+		<panel name="nkRGY" />
+		<ePixmap position="615,658" pixmap="oDreamy/buttons/bluepanel.png"   size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="blue"   position="645,642" size="165,55" zPosition="1" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="nkRB">
+		<!-- Keys Buttons DRE -->
+		<panel name="nkR" />
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/bluepanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="blue"  position="265,642" size="165,55" zPosition="1" backgroundColor="header" transparent="1" />
+	</screen>
+		
+	<!-- Button Templates Colors Source DRE -->
+
+	<screen name="sR">
+		<ePixmap position="45,658"  pixmap="oDreamy/buttons/redpanel.png"    size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_red" render="Label" position="75,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="sRG">
+		<panel name="sR"/>
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/greenpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_green" render="Label" position="265,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="sRGY">
+		<panel name="sRG"/>
+		<ePixmap position="425,658" pixmap="oDreamy/buttons/yellowpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="455,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+	
+	<screen name="sRGYB">
+		<panel name="sRGY"/>
+		<ePixmap position="615,658" pixmap="oDreamy/buttons/bluepanel.png"   size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_blue" render="Label" position="645,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+	
+	<screen name="sRGB">
+		<panel name="sRG"/>
+		<ePixmap position="425,658" pixmap="0Dreamy/buttons/bluepanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_blue" render="Label" position="455,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+	
+	<screen name="sRB">
+		<panel name="sR"/>
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/bluepanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_blue" render="Label" position="265,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="sRY">
+		<panel name="sR"/>
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/yellowpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="265,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="sRYB">
+		<panel name="sRY"/>
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/yellowpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="265,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+		<ePixmap position="425,658" pixmap="oDreamy/buttons/bluepanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_blue" render="Label" position="455,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="sYB">
+		<ePixmap position="45,658"  pixmap="oDreamy/buttons/yellowpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="75,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+		<ePixmap position="235,658" pixmap="oDreamy/buttons/bluepanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget source="key_blue" render="Label" position="265,642" size="165,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="MI">
+		<!-- Keys Buttons DRE -->
+		<eLabel text="Menu" position="890,645" size="200,40" font="Regular;22" foregroundColor="#b0b0b0" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<eLabel text="Info" position="890,665" size="200,40" font="Regular;22" foregroundColor="#b0b0b0" backgroundColor="#101010" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="M">
+		<!-- Keys Buttons DRE -->
+		<eLabel text="Menu" position="890,655" size="200,40" font="Regular;22" foregroundColor="#b0b0b0" backgroundColor="#101010" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="I">
+		<!-- Keys Buttons DRE -->
+		<eLabel text="Info" position="890,655" size="200,40" font="Regular;22" foregroundColor="#b0b0b0" backgroundColor="#101010" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="fakeExit">
+		<ePixmap position="45,658"  pixmap="oDreamy/buttons/redpanel.png"    size="22,22" alphatest="blend" zPosition="2" />
+		<eLabel text="Exit" position="75,642" size="210,55" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1" />
+	</screen>
+</skin>

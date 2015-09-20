@@ -1,0 +1,793 @@
+<skin>
+	<!--
+	##################### mmark_Dreamy_Opendroid v.1.3.0 ########################
+	#                                                                       #
+	#      mmark             Version 1.3.0 released          01-01-2015     #
+	#      mmark             Version 1.2.0 released          29-12-2014     #
+	#      mmark             Version 1.1.0 released          12-12-2014     #
+	#                                                                       #
+	#########################################################################
+	-->
+	<!--  OPENDROID SCREENS OKK -->
+	<screen name="opendroidMainPanel" position="fill" title="OPENDROID Panel - Main Menu" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Ext" />
+		<panel name="nRG"/>
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap position="600,100" size="10,500" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget name="list" position="50,100" size="560,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend" backgroundColor="header" transparent="1" />
+		<widget name="description" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<!-- eLabel name="DEBUG"  text="E001" position="40,40" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+
+
+	<!--  OPENDROID EmuManager OKK -->
+	<screen name="EmuManager" position="fill"  title="OPENDROID Blue Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB"/>
+		<ePixmap position="50,100" zPosition="3" size="83,95" pixmap="oDreamy/icons/emupic.png" alphatest="blend" transparent="1" />
+		<widget name="choose_cam" position="130,115" size="480,30" font="Regular;24" halign="center" foregroundColor="#58bcff" backgroundColor="header" transparent="1" zPosition="1" />
+ 		<eLabel text="OK to Start" position="440,155" size="150,26" font="Regular;22" halign="right" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="2"/>
+		<widget name="config" position="120,155" size="480,26" font="Regular;22" zPosition="2" transparent="1" />
+		<eLabel position="120,195" size="480,1" backgroundColor="#10404040" zPosition="2"/>
+		<!-- is crypted ? -->
+		<ePixmap position="50,210" size="45,22" pixmap="0Dreamy/icons/ico_crypt_off.png" alphatest="blend" /> 
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_crypt_on.png" position="50,210" zPosition="4" size="45,22" alphatest="blend" >
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="lb_channel"     position="120,204" size="350,30" font="Regular;26" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="lb_provider"    position="120,240" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="lb_aspectratio" position="120,270" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="lb_videosize"   position="120,300" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+		
+		<ePixmap pixmap="oDreamy/icons/inet.png" position="50,335" size="90,55" alphatest="blend" zPosition="2" />
+		<widget name="ecminfo" position="120,390" size="480,225" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="header" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/camcenter.png" position="640,440" size="300,300" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG" text="PANEL E002" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+         <!--Infopanel-->
+	<screen name="Infopanel" flags="wfNoBorder" position="fill" backgroundColor="transparent" title="Info panel">
+		<widget name="Mlist" position="70,110" size="700,500" zPosition="1" itemHeight="50" font="screen_text; 20" scrollbarMode="showOnDemand" transparent="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" />
+		<!--eLabel name="Debug" text="S020" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+		<widget name="label1" position="825,425" size="385,175" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
+		<panel name="M"/>
+                <panel name="p800_Template" />
+		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oDreamy/icons/console.png" transparent="1" alphatest="blend" />
+		<panel name="_oe-buttons_template1" />
+	</screen>
+	<screen name="Info" position="0,0" size="1280,720" title="Info" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="label2" position="70,47" foregroundColor="layer-a-title-foreground" size="525,50" font="global_title; 35" backgroundColor="layer-a-background" transparent="1" />
+		<widget name="label1" position="70,110" size="700,530" font="Console;16" zPosition="1" transparent="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground"/>
+		<panel name="M"/>
+                <panel name="p800_Template" />
+		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oDreamy/icons/console.png" transparent="1" alphatest="blend" />
+		<panel name="_oe-buttons_template1" />
+	</screen>
+
+	<!--  OPENDROID News About OKK -->
+	<screen name="OPENDROIDMainNews" position="fill" title="OPENDROID News" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Ext" />
+		<panel name="sRGYB"/>
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="header" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<ePixmap position="805,100" size="10,495" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget source="menu" render="Listbox" position="50,100" size="765,495" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent" transparent="0">
+				{"template": [
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 4), size = (50, 50), png = 2), # index 4 is the status pixmap
+					MultiContentEntryText(pos = (65, 6), size = (700, 44), font=0, color=0xdddddd, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+					],
+					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+					"itemHeight": 55
+				}
+			</convert>
+		</widget>
+		<!-- eLabel name="DEBUG"  text="PANEL E003" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID News Updates Info OKK -->
+	<screen name="OPENDROIDUpdateInfo" position="fill" title="OPENDROID News" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Ext" />
+		<panel name="sRGYB"/>
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<widget name="update" position="50,100" size="765,487" font="Regular;20" halign="left" backgroundColor="#101010" transparent="1" />
+		<ePixmap position="805,100" size="10,487" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="header" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<!-- eLabel name="DEBUG"  text="PANEL E004" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>   
+	
+	<!--  OPENDROID SoftCam CCCam Info OKK -->
+	<screen name="SoftCamInfo" position="fill" title="OPENDROID Softcam Info" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+      		<widget name="menu" position="50,100" itemHeight="30" size="550,510" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+		<ePixmap pixmap="oDreamy/menu/camcenter.png" position="640,440" size="300,300" zPosition="2" alphatest="blend" />
+		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+		<!-- eLabel name="DEBUG"  text="PANEL E005" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID EmuInfo Scripts OKK -->
+	<screen name="EmuInfoScript" position="fill" title="OPENDROID Emu Info Scripts" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Ext" />
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="statuslab" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<widget name="list" position="50,100" itemHeight="30" size="550,510" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+		<ePixmap pixmap="oDreamy/menu/camcenter.png" position="640,440" size="300,300" zPosition="2" alphatest="blend" />
+		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+		<!-- eLabel name="DEBUG"  text="PANEL E006" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID News Updates OKK -->
+	<screen name="UpdateOPENDROID" position="center,center" size="550,200" title="Software update" >
+		<widget name="activityslider" position="10,10" size="530,15" backgroundColor="bluette" />
+		<eLabel position="9,89" size="532,32" backgroundColor="bluette"/>
+		<widget name="slider" position="10,90" size="530,30" zPosition="1" />
+		<widget source="package" render="Label" position="10,45"  size="530,24"  font="Regular;20" halign="center" valign="center" backgroundColor="#101010" transparent="1" />
+		<widget source="status"  render="Label" position="10,115" size="530,100" font="Regular;20" halign="center" valign="center" backgroundColor="#101010" transparent="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E007" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Plugin OKK -->
+	<screen name="GreenPanel" position="0,0" size="1280,720"  title="OPENDROID Green Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB"/>
+		<ePixmap position="605,70" size="230,425" pixmap="Dreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="oDreamy/menu/plugin_selection.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap position="600,100" size="10,500" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget source="list" render="Listbox" position="50,100" size="560,500" scrollbarMode="showOnDemand" transparent="1">
+			  <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (125, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (125, 24), size = (650, 24), font=1, color = 0x6da6ff, text = 1),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (100, 40), png = 2),
+			      ],
+			      "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+			      "itemHeight": 50
+			      }
+			  </convert>
+		</widget>
+		<!-- eLabel name="DEBUG"  text="PANEL E008" position="20,20" size="300,60" font="Regular;48"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID  Script OKK -->
+	<screen name="Script" position="fill" title="OPENDROID Script Tool" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Ext" />
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<widget name="list" position="50,100" size="550,500" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1" />
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="statuslab" position="840,280" size="410,160" zPosition="10" font="Regular;24" halign="center" foregroundColor="ltbluette" backgroundColor="bluette" transparent="1" />
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="280,280" zPosition="2" alphatest="blend" />
+ 		<!-- eLabel name="DEBUG"  text="PANEL E009" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Smart Script OKK -->
+	<screen name="Script" position="fill" title="OPENDROID Smart Script" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Ext" />
+		<panel name="nR" />
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="statuslab" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<widget name="list" position="50,100" itemHeight="30" size="550,510" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+		<ePixmap pixmap="oDreamy/menu/ico_log.png" position="640,440" size="280,280" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E010" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>   
+	
+	<!--  OPENDROID Plugin Addons OKK -->
+	<screen name="AddonMenu" position="fill" title="OPENDROID Addons Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nR"/>
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="list" position="50,100" size="550,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<!-- eLabel name="DEBUG"  text="PANEL E011" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Plugin Downloads OKK -->
+	<screen name="Addonow" position="fill" title="OPENDROID Internet Addons" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="nRG"/>
+		<ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<widget name="status" position="50,100" size="550,30" font="Regular;24" foregroundColor="ltbluette" backgroundColor="header" transparent="1" />      
+		<ePixmap position="600,150" size="10,450" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget name="menu" position="50,150" size="560,450" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="280,280" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E012" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>	
+
+	<!--  OPENDROID Internet Addons OKK -->
+	<screen name="InternetAddons" position="fill" title="OPENDROID Internet Addons" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB"/>
+		<ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<widget name="status" position="50,100" size="550,30" font="Regular;24" foregroundColor="ltbluette" backgroundColor="header" transparent="1" />      
+		<ePixmap position="600,150" size="10,450" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget name="menu" position="50,150" size="560,450" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="280,280" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E013" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID ExtraMenu OKK -->
+	<screen name="xtrasMenu" position="fill" title="OPENDROID Extras Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<widget source="list" render="Listbox" position="50,100" size="550,500" scrollbarMode="showOnDemand" transparent="1">
+			  <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (70, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (70, 24), size = (650, 24), font=1, text = 3),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (40, 40), png = 1),
+			      ],
+			      "fonts": [gFont("Regular", 23),gFont("Regular", 17)],
+			      "itemHeight": 50
+			      }
+			  </convert>
+		</widget>
+		<ePixmap pixmap="oDreamy/menu/ico_plugin.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E014" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID Remove Addons OKK -->
+	<screen name="AddonRemove" position="0,0" size="1280,720" title="OPENDROID Remove Addons" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nR"/>
+		<widget name="status" position="50,100" size="550,30" font="Regular;26" foregroundColor="ltbluette" backgroundColor="header" transparent="1" />      
+		<widget name="remove" position="50,140" size="550,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E015" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Manual Addons Install OKK -->
+	<screen name="Manual_installation" position="fill" title="OPENDROID Manual Addons Installation" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nR"/>
+		<widget name="status" position="50,100" size="550,30" font="Regular;24" foregroundColor="ltbluette" backgroundColor="header" transparent="1" />      
+		<widget name="listaaddonow" position="50,140" size="550,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E016" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Mount Manager OKK -->
+	<screen name="DeviceManager" position="fill"  title="OPENDROID Devices Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<widget name="lab1" zPosition="2" position="50,100" size="700,40" font="Regular;24" halign="center" foregroundColor="ltbluette" backgroundColor="#10202020" transparent="1"/>
+		<widget source="list" render="Listbox" position="50,100" size="765,480" scrollbarMode="showOnDemand" zPosition="1" transparent="1" >
+				      <convert type="TemplatedMultiContent">
+				      {"template": [
+				      MultiContentEntryText(pos = (90, 0), size = (670, 30), font=0, color=0x3589ff, text = 0),
+				      MultiContentEntryText(pos = (110, 30), size = (650, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+				      MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (80, 80), png = 2),
+				      ],
+				      "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+				      "itemHeight": 80
+				      }
+				      </convert>
+		</widget>
+		<!-- eLabel name="DEBUG"  text="PANEL E017" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID Backup Panel OKK -->
+	<screen name="OPENDROIDBackupPanel" position="0,0" size="1280,720" title="OPENDROID Image Backup Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGY" />
+		<ePixmap pixmap="oDreamy/menu/backup.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="label1" position="50,90"  size="515,30" zPosition="1" halign="center" font="Regular;25" foregroundColor="ltbluette" backgroundColor="header" transparent="1"/>
+		<widget name="label2" position="50,130" size="515,30" zPosition="1" halign="center" font="Regular;20" foregroundColor="white"     backgroundColor="header" transparent="1"/>
+		<widget name="label3" position="50,190" size="515,30" zPosition="1" halign="center" font="Regular;20" foregroundColor="ltbluette" backgroundColor="header" transparent="1"/>
+		<eLabel position="50,220" size="540,1" backgroundColor="#10303030" zPosition="2"/>
+		<widget name="list" position="50,240" size="540,250" scrollbarMode="showOnDemand" transparent="1"/>
+		<!-- eLabel name="DEBUG" text="PANEL E018" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID Full Backup Panel OKK -->
+	<screen name="FullBackup" position="fill" title="OPENDROID Full Image Backup Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<widget name="label1" position="50,100" size="550,30"  zPosition="1" halign="center" font="Regular;25" foregroundColor="ltbluette" backgroundColor="header" transparent="1"/>
+		<widget name="label2" position="50,140" size="550,290" zPosition="1" halign="center" font="Regular;20" foregroundColor="white"     backgroundColor="header" transparent="1"/>
+		<widget name="config" position="50,250" size="540,250" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/backup.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E019" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID  NetBrowser OKK -->
+	<screen name="NetBrowser" position="fill" title="Select Network Interface" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<ePixmap pixmap="oDreamy/menu/ico_storage.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<widget source="list" render="Listbox" position="50,100" size="550,460" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1" >
+			<convert type="StringList" />
+		</widget>
+ 		<!-- eLabel name="DEBUG"  text="PANEL E020" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- OPENDROID ButtonSetup OKK -->
+	<screen name="ButtonSetup" position="fill" title="OPENDROID Quick Button Setup" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Ext" />
+		<panel name="nRG"/>
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap position="600,100" size="10,500" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="list" position="50,100" size="560,500" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="description" position="840,270" size="400,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" zPosition="2" />
+		<eLabel position="840,370" size="400,1" backgroundColor="#20101010" zPosition="2"/>
+		<widget name="choosen" position="840,415" size="420,70" halign="center" scrollbarMode="showOnDemand" foregroundColor="ltbluette" transparent="1" zPosition="2" />
+		<!-- eLabel name="DEBUG"  text="PANEL E021" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	 </screen>
+	 
+	<!--  OPENDROID E2 Config Info OKK -->
+	<screen name="Enigma2ConfigInfo" position="fill" title="OPENDROID Enigma2 Config" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<widget name="menu" position="50,100" size="770,510" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1" />
+		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+ 		<eLabel position="50,605" size="760,5" backgroundColor="#20000000" zPosition="1"/>
+ 		<!-- eLabel name="DEBUG" text="PANEL E022" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Kernel Info OKK -->
+	<screen name="KernelInfo" position="fill" title="OPENDROID Kernel Informations" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<widget name="menu" position="50,100" size="770,500" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1" />
+		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+ 		<eLabel position="50,605" size="760,5" backgroundColor="#20000000" zPosition="1"/>
+ 		<!-- eLabel name="DEBUG" text="PANEL E023" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- OPENDROID Process Info OKK -->
+	<screen name="ProcessInfo" position="fill" title="OPENDROID Process Informations" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<widget name="menu" position="50,100" size="770,510" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1" />
+ 		<eLabel position="50,605" size="760,5" backgroundColor="#20000000" zPosition="1"/>
+ 		<!-- eLabel name="DEBUG" text="PANEL E024" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>'
+
+	<!--  OPENDROID BootManager OKK -->
+	<screen name="OPENDROIDBootImageChoose" position="0,0" size="1280,720" title="OPENDROID Multiboot Image Choose" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Ext" />
+		<panel name="nRGYB" />
+		<widget name="label10" position="60,100"  size="750,36" font="Regular;28" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label11" position="650,100" size="80,36"  font="Regular;28" foregroundColor="white"     backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label1"  position="60,150"  size="730,60" font="Regular;22" foregroundColor="white"     backgroundColor="#101010" transparent="1" zPosition="1" />
+		<eLabel position="60,220" size="750,1" backgroundColor="#10303030" zPosition="2"/>
+		<widget name="device_icon" position="60,250" size="80,80" alphatest="blend" />
+		<widget name="label2"  position="150,250" size="750,30" halign="left" font="Regular;24" backgroundColor="#101010" foregroundColor="white"     transparent="1" zPosition="1" />
+		<widget name="label6"  position="150,280" size="750,30" halign="left" font="Regular;24" backgroundColor="#101010" foregroundColor="ltbluette" transparent="1" zPosition="1" />
+		<widget name="config"  position="60,350" size="750,250" scrollbarMode="showOnDemand" transparent="1"/>
+		<eLabel position="825,0" size="465,390" backgroundColor="#FF000000" zPosition="2"/>
+		<ePixmap pixmap="oDreamy/icons/info_on.png" position="840,410" size="50,50" zPosition="2" alphatest="blend" />
+		<widget name="label3"  position="890,405"  size="140,30" font="Regular;22" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="label7"  position="1000,405" size="80,30"  font="Regular;22" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="label4"  position="890,465"  size="220,30" font="Regular;22" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="label8"  position="1090,465" size="200,30" font="Regular;22" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="free_space_progressbar" position="890,435" size="350,10" borderColor="ltbluette" borderWidth="1" zPosition="3" />
+		<widget name="label4"  position="890,450"  size="350,30" font="Regular;20" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="label8"  position="1010,450" size="270,30" font="Regular;20" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="label5"  position="890,520"  size="350,60" font="Regular;20" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="label9"  position="890,570"  size="350,30" font="Regular;26" backgroundColor="bluette" transparent="1" zPosition="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E025" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>		
+
+	<!--  OPENDROID MultiBoot OKK -->
+	<screen name="OPENDROIDChooseOnLineImage" position="fill" title="OPENDROIDBoot - Download OnLine Images" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p900_Template" />
+		<panel name="p900_Date" />
+		<ePixmap position="750,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="790,440" size="256,256" alphatest="blend" zPosition="2" />
+		<ePixmap position="745,110" size="10,480" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="50,110" size="705,480" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (105, 2), size = (620, 26), font=0, color=0x3589ff, flags = RT_HALIGN_LEFT, text = 0),
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (90, 50), png = 1),
+					MultiContentEntryText(pos = (105, 30), size = (620, 26), font=1, flags = RT_VALIGN_TOP | RT_HALIGN_LEFT, text = 3),
+					],
+					"fonts": [gFont("Regular", 24),gFont("Regular", 22)],
+					"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<ePixmap position="50,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+		<!-- eLabel name="DEBUG"  text="PANEL E026" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+		  
+	<!--  OPENDROID MultiBoot Download Images OKK -->
+	<screen name="DownloadOnLineImage" position="fill" title="OPENDROIDBoot - Download Image" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="imageList" position="50,100" size="550,450" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<!-- eLabel name="DEBUG" text="PANEL E027" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID MultiBoot OKK -->
+	<screen name="OPENDROIDBootInstallation" position="fill" title="OPENDROID Multiboot Installation" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<widget name="label1" position="50,100" size="550,30"  zPosition="1" halign="center" font="Regular;25" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1"/>
+		<widget name="label2" position="50,140" size="550,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#101010" transparent="1"/>
+		<widget name="config" position="50,250" size="550,280" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="VKeyIcon" pixmap="buttons/key_text.png" alphatest="on" zPosition="1" position="80,420" size="50,25"/>
+		<widget name="HelpWindow" position="50,450" size="1,1" transparent="1" zPosition="2" alphatest="on"/>
+		<!-- eLabel name="DEBUG"  text="PANEL E028" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID MultiBoot OKK -->
+	<screen name="OPENDROIDBootImageInstall" position="fill" title="OPENDROIDBoot - Image Installation" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<widget name="config" position="50,100" size="760,440" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="HelpWindow" position="500,310" size="1,1" transparent="1" alphatest="on" zPosition="5" />      
+		<!-- eLabel name="DEBUG"  text="PANEL E029" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID DropBear OKK -->
+	<screen name="DropbearConfig" position="0,0" size="1280,720" title="OPENDROID DropBear Setup" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<widget name="state"  position="50,95"  size="545,30" font="Regular;24" halign="center" valign="center" noWrap="1"  backgroundColor="red" foregroundColor="white" transparent="0" />
+		<widget name="config" position="50,150" size="545,200" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap pixmap="oDreamy/menu/net.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E030" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID  StreamInfo OKK -->
+	<screen name="StreamInfo" position="fill" title="OPENDROID Stream Informations" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<ePixmap pixmap="oDreamy/menu/info_screen.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="menu" position="50,100" size="550,500" scrollbarMode="showOnDemand" transparent="1" />
+ 		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+		<!-- eLabel name="DEBUG"  text="PANEL E031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  FileManager OKK -->
+	<screen name="FileManager" position="fill" title="OPENDROID File Manager" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<panel name="M" />
+		<widget name="list_left_text" position="40,100"  size="380,44" font="Regular;18" halign="center" foregroundColor="ltbluette" backgroundColor="bluette" zPosition="1" />
+		<widget name="list_left"      position="40,150" size="380,450" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+		<ePixmap position="410,150" size="10,450" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget name="list_right_text" position="450,100"  size="370,44" font="Regular;18" foregroundColor="ltbluette" halign="center" backgroundColor="bluette" zPosition="2" />
+		<widget name="list_right"      position="450,150" size="370,450" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="1" />
+		<ePixmap position="810,150" size="10,450" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<ePixmap position="1030,663" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on"/>
+		<widget  position="1120,667" size="210,21" name="key_menu"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E043" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>	
+    	
+
+	<!--  File Comander OKK -->
+	<screen name="FileCommanderScreen" position="fill" title="File Commander" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<panel name="MI" />
+		<widget source="Title" render="Label" position="40,46"   size="570,30" halign="center" font="Head;24" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<widget name="list_left_head" position="40,100"  size="380,44" font="Regular;18" halign="center" foregroundColor="ltbluette" backgroundColor="bluette" zPosition="1" />
+		<widget name="list_left"      position="40,150" size="380,450" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+		<ePixmap position="410,150" size="10,450" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget name="list_right_head" position="450,100"  size="370,44" font="Regular;18" foregroundColor="ltbluette" halign="center" backgroundColor="bluette" zPosition="2" />
+		<widget name="list_right"      position="450,150" size="370,450" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="1" />
+		<ePixmap position="810,150" size="10,450" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
+		<!-- eLabel name="DEBUG"  text="PANEL P032" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  File Comander Select Files OKK --> 
+	<screen name="FileCommanderScreenFileSelect" position="fill" title=" " backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="FileCommanderScreen" />
+		<!-- eLabel name="DEBUG"  text="PANEL P033" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>	
+
+	<!--  File Comander Setup OKK --> 
+	<screen name="FileCommanderConfigScreen" position="fill" title="File Commander - Settings" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Ext" />
+		<panel name="nRG" />
+		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- Date -->
+		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format %A %B %d</convert>
+		</widget>
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="config" position="50,100"  size="540,510" itemHeight="30" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+		<widget name="help"   position="840,290" size="410,330" font="Regular;20" halign="left" foregroundColor="ltbluette" backgroundColor="bluette" transparent="1" zPosition="2" />
+		<!-- eLabel name="DEBUG"  text="PANEL P034" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- OPENDROID ButtonSetupSelect OKK -->
+	<screen name="ButtonSetupSelect" position="0,0" size="1280,720" title="OPENDROID Quick Button Select" backgroundColor="black"  flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Ext" />
+		<panel name="nRG" />
+		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap position="590,90" size="10,525" pixmap="oDreamy/box/maxbar.png" zPosition="14" alphatest="blend" transparent="1" />
+		<widget name="list" position="50,100" size="550,525" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="description" position="840,240" size="400,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
+		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+		<widget name="choosen" position="840,250" size="400,70" scrollbarMode="showOnDemand" font="Regular;26" foregroundColor="bluette" backgroundColor="header" transparent="1" zPosition="2"/>
+		<!-- eLabel name="DEBUG"  text="PANEL E045" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	 </screen>
+		
+	<!--  OPENDROID Weather Plugin OKK -->
+	<screen name="ForecaWeatherPlugin" position="fill" title="AccuWeather - foreca.com" backgroundColor="#20000000" flags="wfNoBorder" >
+		<panel name="nRGYB" />
+		<widget name="statustext"    position="60,43"   size="730,550" font="Regular;24" halign="center" valign="center" backgroundColor="#10000000" zPosition="2" />
+		<ePixmap position="60,43"    size="16,26"       pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5" />
+		<widget name="ico_left"      position="60,43"   size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5" />
+		<widget name="lugar"         position="90,41"   size="350,30" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="2" />
+		<widget name="ico_right"     position="450,43"  size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5" />
+		<ePixmap position="450,43"   size="16,26"       pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5" />
+		<widget name="info_entradas" position="480,43"  size="300,23"   font="Regular; 23" halign="right" foregroundColor="#404040" backgroundColor="#000000" transparent="1" zPosition="3" />
+		<widget name="current_icon"  position="60,90"   size="74,74"    alphatest="blend"  zPosition="1" />
+		<widget name="condicion"     position="250,100" size="370,500"  font="Regular; 19" foregroundColor="white" backgroundColor="#000000" valign="top" transparent="1" zPosition="5" />
+		<widget name="ico_temp"      position="60,180"  size="74,74"    alphatest="blend" zPosition="2" />
+		<widget name="temperatura"   position="115,210" size="98,30"    font="Regular; 26" transparent="1" noWrap="1" halign="left" backgroundColor="#000000" zPosition="3" />
+		<widget name="barra"         position="60,290"  size="730,330"  alphatest="blend" zPosition="2" />
+		<widget name="detallado"     position="20,10"   size="1260,700" scrollbarMode="showOnDemand" zPosition="8" backgroundColor="#10000000" />
+		<widget name="fondo_detalle" position="20,20"   size="1230,720" alphatest="blend" zPosition="10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/fondolista-fs8.png"/>
+		<widget name="viento"        position="860,210" size="191,65"   font="Regular;22" transparent="1" backgroundColor="#000000" valign="top" zPosition="5" />
+		<widget name="satelite"      position="50,95"   size="750,540"  alphatest="blend" transparent="1" zPosition="10" />
+		<widget name="statustext2"   position="50,77"   size="750,540"  font="Regular;20" halign="center" valign="center" transparent="0" zPosition="8" />
+		<widget name="info_barra"    position="162,328" size="600,290"  font="Regular;20" halign="center" valign="center" transparent="0" zPosition="1" />
+		<widget name="le_barra"      position="232,562" size="600,35"   alphatest="blend" zPosition="10" />
+		<widget name="ico_vie"       position="60,150"  size="29,40"    alphatest="blend" zPosition="2" />
+		<widget name="barrapix_abj"  position="60,20"   size="20,20"    alphatest="blend" transparent="1" zPosition="9" />
+		<widget name="barrapix_arr"  position="60,51"   size="730,500"  alphatest="blend" transparent="1" zPosition="9" />
+		<widget name="dia1"          position="901,380" size="340,25"   halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="icono_dia1"    position="819,380" size="79,79"    alphatest="blend" zPosition="1" />
+		<widget name="info_dia1"     position="901,403" size="340,55"   halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="dia2"          position="901,462" size="340,25"   halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="icono_dia2"    position="819,462" size="79,79"    alphatest="blend" zPosition="1" />
+		<widget name="info_dia2"     position="901,486" size="340,55"   halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="dia3"          position="901,544" size="340,25"   halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="icono_dia3"    position="819,544" size="79,79"    alphatest="blend" zPosition="1" />
+		<widget name="info_dia3"     position="901,568" size="340,55"   halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<ePixmap position="1020,666" size="40,40"       pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend" zPosition="3" />
+		<widget position="970,667"   name="key_menu"    size="210,21" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E041" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID Weather Plugin Setup OKK -->
+	<screen name="WeatherPluginEntriesListConfigScreenfore" position="fill" title="WeatherPlugin: List of Entries" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<widget name="city" position="50,100" size="150,50" font="Regular;20" halign="left" foregroundColor="ltbluette" backgroundColor="#10101010" transparent="1" />
+		<widget name="language" position="220,100" size="150,50" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="#10101010" transparent="1" />
+		<widget name="entrylist" position="50,140" size="550,550" scrollbarMode="showOnDemand" itemHeight="30" transparent="1" />
+		<ePixmap pixmap="oDreamy/menu/web_browser.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E042" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID FAQ List OKK -->
+	<screen name="OPENDROIDFaq_YTChannel" position="fill" title="OPENDROID FAQ List" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nR" />
+		<widget name="title"        position="50,100" size="550,28" halign="left" font="Regular;24" zPosition="4" foregroundColor="ltbluette" backgroundColor="black" transparent="1" />	
+		<widget name="genreList"    position="50,150" size="550,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="name"         position="50,190" size="500,40" font="Regular;26" valign="top" foregroundColor="#00e5b243" backgroundColor="#00101214" transparent="1" zPosition="0" />
+		<widget name="ContentTitle" position="50,240" size="550,80" halign="left" font="Regular;24" foregroundColor="yellow" backgroundColor="black" transparent="1" zPosition="4" />	
+		<ePixmap pixmap="oDreamy/menu/ico_listch.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E040" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Choose Mount OKK -->
+	<screen name="DeviceManager_Setup" position="0,0" size="1280,720"  title="OPENDROID Devices Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<widget name="config" position="50,100" itemHeight="30" size="550,480" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+		<ePixmap pixmap="oDreamy/menu/folders.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E035" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Network Interface OKK -->
+	<screen name="NetBrowser" position="fill" title="Select Network Interface" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<widget source="list" render="Listbox" position="50,100" size="550,500" scrollbarMode="showOnDemand" transparent="1">
+		      <convert type="StringList" />
+		</widget>
+		<ePixmap pixmap="oDreamy/menu/net.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E036" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Backup Panel Step 2 OKK -->
+	<screen name="OPENDROIDBackupPanel_Step2" position="fill" title="OPENDROID Image Backup Panel - STEP 2" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRG" />
+		<widget name="label1" position="50,100" size="550,30"  zPosition="1" halign="center" font="Regular;25" foregroundColor="ltbluette" backgroundColor="header" transparent="1"/>
+		<widget name="label2" position="50,140" size="550,290" zPosition="1" halign="center" font="Regular;20" foregroundColor="white"     backgroundColor="header" transparent="1"/>
+		<eLabel position="50,220" size="540,1" backgroundColor="#10303030" zPosition="2"/>
+		<widget name="config" position="50,250" size="540,250" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/backup.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E037" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID Backup Panel Step 2 OKK -->
+	<screen name="OPENDROIDRestorePanel_Step1" position="0,0" size="1280,720" title="OPENDROID Image Restore Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<widget name="config" position="50,100" size="550,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="oDreamy/menu/ico_storage.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL E038" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID  NetBrowser OKK -->
+	<screen name="SwapManager" position="fill" title="OPENDROID Swap File Manager" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+		<widget name="state"  position="50,100" size="550,80" font="Regular;22" halign="center" noWrap="1" backgroundColor="red" foregroundColor="white" />
+		<widget name="config" position="50,130" size="550,180" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1" />
+ 		<!-- eLabel name="DEBUG"  text="PANEL E039" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+   	
+	<!--  OPENDROID ListChannel -->
+	<screen name="OPENDROIDFaq_ListChannel_ListScreen" position="fill" title="OPENDROID FAQ List" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
+		<panel name="nRGYB" />
+
+		<widget name="ContentTitle" position="50,100" size="515,25" backgroundColor="#00aaaaaa" zPosition="0" foregroundColor="#00000000" font="Regular;22" halign="center" />
+		<widget name="liste"        position="50,140" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="name"         position="640,420" size="580,30" foregroundColor="#00e5b243" backgroundColor="#00101214" transparent="1" font="Regular;26" valign="top" zPosition="0" />
+		<widget name="handlung"     position="640,460" size="580,170" backgroundColor="#00101214" transparent="1" font="Regular;19" valign="top" zPosition="0" />
+		<widget name="VideoPrio"    position="1070,665" size="105,24" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="Regular; 20" valign="center" halign="right" zPosition="1" />
+		<widget name="vPrio"        position="1200,665" size="25,25" backgroundColor="#00101214" transparent="1" font="Regular;20" valign="center" halign="center" zPosition="1" foregroundColor="#00bab329" />
+		<widget name="Page"         position="1065,665" size="56,25" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="Regular;20" valign="center" halign="right" zPosition="0" />
+		<widget name="page"         position="1100,665" size="95,25" backgroundColor="#00101214" transparent="1" font="Regular;20" valign="center" halign="right" zPosition="0" />
+		<widget name="coverArt" pixmap="~/original/images/no_coverArt.png" position="720,90" size="410,300" transparent="1" alphatest="blend" borderWidth="2" borderColor="#00555556" />
+		<!-- eLabel name="DEBUG"  text="PANEL E044" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID StartEmu (Change this)  -->
+	<screen name="EmuManagerStarting" position="390,100" size="484,250" title="OPENDROID" flags="wfNoBorder">
+	        <widget name="starting" position="center,70" size="484,250" zPosition="1" pixmaps="oDreamy/opendroid/sc1.png,oDreamy/opendroid/sc2.png,oDreamy/opendroid/sc3.png,oDreamy/opendroid/sc4.png
+	        	,oDreamy/opendroid/sc5.png,oDreamy/opendroid/sc6.png,oDreamy/opendroid/sc7.png,oDreamy/opendroid/sc8.png,oDreamy/opendroid/sc9.png,oDreamy/opendroid/sc10.png,oDreamy/opendroid/sc11.png" alphatest="blend" />
+		<widget name="text" position="10,180" halign="center" size="460,60" zPosition="1" font="Regular;18" valign="top" transparent="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E046" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Animation -->
+	<screen name="ConnectionAnimation" position="390,100" size="484,240" title="OPENDROID" flags="wfNoBorder">
+		<widget name="connect" position="0,0" size="484,240" zPosition="-1" transparent="1"
+			pixmaps="oDreamy/opendroid/connection_1.png,oDreamy/opendroid/connection_2.png,oDreamy/opendroid/connection_3.png,oDreamy/opendroid/connection_4.png,oDreamy/opendroid/connection_5.png" />
+		<widget name="lab1" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E047" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID EmuManager OKK -->
+	<screen name="EmuManagerStarting" position="center,450" size="400,200" title="OPENDROID StartCam" >
+	        <widget name="text" position="10,10" size="380,60" halign="center" font="Regular;20" valign="center" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+	        <widget name="starting" position="center,70" size="128,128" zPosition="1" pixmaps="oDreamy/opendroid/sc1.png,oDreamy/opendroid/sc2.png,oDreamy/opendroid/sc3.png,oDreamy/opendroid/sc4.png
+	        	,oDreamy/opendroid/sc5.png,oDreamy/opendroid/sc6.png,oDreamy/opendroid/sc7.png,oDreamy/opendroid/sc8.png,Dreamy/opendroid/sc9.png,oDreamy/opendroid/sc10.png,oDreamy/OPENDROID/sc11.png" alphatest="blend" />
+ 		<!-- eLabel name="DEBUG"  text="PANEL E050" position="10,10" size="80,60" font="Regular;16" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Backup Panel OKK -->
+	<screen name="OPENDROIDBackupPanel_Step3" position="center,center" size="484,240" title="OPENDROID Backup in progress..." flags="wfNoBorder">
+		<widget name="status" position="0,0" size="484,240" zPosition="-1" 
+			pixmaps="oDreamy/opendroid/connection_1.png,oDreamy/opendroid/connection_2.png,oDreamy/opendroid/connection_3.png,oDreamy/opendroid/connection_4.png
+			,oDreamy/opendroid/connection_5.png,oDreamy/opendroid/connection_6.png,oDreamy/opendroid/connection_7.png,oDreamy/opendroid/connection_8.png,oDreamy/opendroid/connection_9.png  
+			,oDreamy/opendroid/connection_10.png,oDreamy/opendroid/connection_11.png" />
+		<widget name="label" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E048" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  OPENDROID Backup Panel Step 3 -->
+	<screen name="OPENDROIDRestorePanel_Step2" position="center,center" size="484,240" title="OPENDROID Restore in progress..." flags="wfNoBorder">
+		<widget name="status" position="0,0" size="484,240" zPosition="-1" 
+			pixmaps="oDreamy/opendroid/connection_1.png,oDreamy/opendroid/connection_2.png,oDreamy/opendroid/connection_3.png,oDreamy/opendroid/connection_4.png,
+			oDreamy/opendroid/connection_5.png,oDreamy/opendroid/connection_6.png"  />
+		<widget name="label" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E049" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  OPENDROID Permanent Clock -->
+    	<screen name="PermanentClock" position="610,40" size="110,52" flags="wfNoBorder" title="opendroid Permanent Clock" backgroundColor="#55000000" >
+        	<widget source="global.CurrentTime" render="Label" position="10,10" size="90,34" font="LCD;32" foregroundColor="#d0d0d0" valign="center" halign="center" transparent="1" >
+            		<convert type="ClockToText">Default</convert>
+        	</widget>
+		<!-- eLabel name="DEBUG"  text="PANEL E051" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+   	</screen>
+	<!-- OPENDROIDBootLogoSelector -->
+	<screen name="opendroidBootLogoSelector" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template" />
+		<panel name="p800_Logo"/>
+		<panel name="p800_Date"/>
+		<panel name="nRG" />
+		<widget name="config" position="50,150" size="545,180" scrollbarMode="showOnDemand" itemHeight="30" backgroundColor="header" transparent="1"/>
+		<widget name="Preview" position="50,385" size="390,220" alphatest="on" zPosition="10"/>
+		<ePixmap position="640,440" size="300,300" pixmap="menu/missing.png" alphatest="blend"/>
+		<!--eLabel name="Debug" text="S116" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+</skin>

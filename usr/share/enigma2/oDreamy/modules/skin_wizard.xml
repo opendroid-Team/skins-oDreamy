@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<skin>
+	<!--
+	##################### mmark_Dreamy_Opendroid v.1.3.0 ########################
+	#                                                                       #
+	#      mmark             Version 1.3.0 released          01-01-2015     #
+	#      mmark             Version 1.2.0 released          29-12-2014     #
+	#      mmark             Version 1.1.0 released          12-12-2014     #
+	#                                                                       #
+	#########################################################################
+	-->
+
+	<!-- Video Wizzard DRE -->
+	<screen name="VideoWizard" title="Welcome..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<!-- Code -->
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="50,330" size="690,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (690, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+			</convert>
+		</widget>
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--<widget name="portpic" position="45,343" size="40,40" zPosition="2" alphatest="on" transparent="1"/>-->
+		<!--eLabel name="DEBUG" text="W001" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- Language Wizzard DRE -->
+	<screen name="LanguageWizard" title="Language Selection..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<panel name="sRGYB"/>
+		<!-- Code -->
+		<widget name="text" position="50,540" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<widget source="languages" render="Listbox" position="50,100" size="690,400" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (80, 10), size = (600, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+					MultiContentEntryPixmap(pos = (5, 5), size = (60, 40), png = 2), # index 2 is the pixmap
+					],
+					"fonts": [gFont("Regular", 26)],
+					"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<!--eLabel name="DEBUG" text="W002" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- Position Wizzard DRE -->
+	<screen name="StartWizard" title="Start Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<!-- Code -->
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="50,330" size="690,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (690, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+			</convert>
+		</widget>
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--eLabel name="DEBUG" text="W003" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- Network Wizard DRE -->
+	<screen name="NetworkWizard" position="fill" title="Network Wizard" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<!-- Code -->
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+
+		<widget source="list" render="Listbox" position="50,330" size="690,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (690, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+			</convert>
+		</widget>
+		<widget source="VKeyIcon" render="Pixmap" position="40,440" size="0,0" zPosition="1" pixmap="oDreamy/icons/text.png" alphatest="blend">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="HelpWindow" position="80,480" size="1,1" zPosition="1" transparent="1" />
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--eLabel name="DEBUG" text="W004" position="40,5" size="500,50" font="Regular;48" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99" /-->
+	</screen>
+
+	<!-- Update Wizard DRE --> 
+	<screen name="InstallWizardIpkgUpdater" title="Update Wizard..." position="fill" backgroundColor="transparent0" flags="wfNoBorder" >
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<!-- Code -->
+		<ePixmap pixmap="icons/info_on.png" position="40,95" size="40,40" zPosition="10" alphatest="blend"/>
+		<widget source="statusbar" render="Label" position="110,100" size="650,250" font="Regular;22" foregroundColor="#ffffff" backgroundColor="header" transparent="1" zPosition="1"/>
+		<!--eLabel name="DEBUG" text="W005" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- Restore Wizard DRE -->
+	<screen name="MessageBoxWizard" title="Message Wizard..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<!-- Code -->
+		<widget name="ErrorPixmap"    pixmap="icons/input_error.png"    position="50,100" size="53,53" alphatest="blend"/>
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="50,100" size="53,53" alphatest="blend"/>
+		<widget name="InfoPixmap"     pixmap="icons/input_info.png"     position="50,100" size="53,53" alphatest="blend"/>
+		<widget name="text" position="50,540" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1"/>
+		<widget source="list" render="Listbox" position="50,330" size="690,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (690, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+			</convert>
+		</widget>
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--eLabel name="DEBUG" text="W006" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- Image Wizard DRE -->
+	<screen name="ImageWizard" title="Image Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		
+		<widget source="list" render="Listbox" position="50,340" size="690,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+			</convert>
+		</widget>
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--eLabel name="DEBUG" text="W007" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- Tutorial Wizard DRE -->
+	<screen name="TutorialWizard" title="Tutorial Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<!--eLabel name="DEBUG" text="W008" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- Default SatList Wizard DRE -->
+	<screen name="DefaultSatLists" title="Default Sat Lists..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		
+		<widget source="list" render="Listbox" position="80,340" size="540,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+			</convert>
+		</widget>
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--eLabel name="DEBUG" text="W009" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- Default Wizard DRE -->
+	<screen name="DefaultWizard" title="Default Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		
+		<widget source="list" render="Listbox" position="80,340" size="540,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+			</convert>
+		</widget>
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--eLabel name="DEBUG" text="W010" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- Default Wizard -->
+	<screen name="SoftwareUpdateChoices" title="Software Update..." position="center,center" size="560,225">
+		<widget name="list" position="0,0" size="560,150" itemHeight="28" font="Regular;22" foregroundColor="#ffffff" backgroundColor="header" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="text" position="0,150" size="560,75" font="Regular;22" foregroundColor="#ffffff" backgroundColor="header" halign="center" transparent="0"/>
+		<!--eLabel name="DEBUG" text="W011" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- CleanupWizard -->
+	<screen name="CleanupWizard" title="Cleanup Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="80,340" size="540,270" scrollbarMode="showOnDemand" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+			</convert>
+		</widget>
+		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
+		<widget name="rc"         position="810,100" size="160,500"  pixmaps="skin_default/rc.png" alphatest="blend" zPosition="2" />
+		<widget name="arrowdown"  position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" alphatest="blend" zPosition="3" />
+		<widget name="arrowup"    position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<widget name="arrowup2"   position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png"   alphatest="blend" zPosition="3" />
+		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
+		<!--eLabel name="DEBUG" text="W012" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- CleanupWizard Config -->
+	<screen name="CleanupWizardConfiguration" title="Cleanup Wizard Settings" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p900_Template"/>
+		<panel name="p900_Date"/>
+		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
+		<eLabel position="745,100" size="2,510"  backgroundColor="#202020" zPosition="0" />
+		<widget name="config" position="50,320" size="650,240" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+
+		<widget source="Title"  render="Label" font="Regular;35" position="70,47" size="800,43" backgroundColor="header" transparent="1"/>
+		<widget source="status" render="Label" font="Regular;22" halign="center" position="70,600" size="700,25" backgroundColor="header" transparent="1"/>
+		
+		<ePixmap alphatest="blend" pixmap="buttons/redpanel.png" position=" 70,635" size="30,40"/>
+		<ePixmap alphatest="blend" pixmap="buttons/greenpanel.png" position="360,635" size="30,40"/>
+		<widget backgroundColor="header" font="Regular;20" halign="left" name="key_red" position="105,637" size="240,24" transparent="1" zPosition="1"/>
+		<widget backgroundColor="header" font="Regular;20" halign="left" name="key_green" position="395,637" size="240,24" transparent="1" zPosition="1"/>
+		<ePixmap alphatest="blend" pixmap="menu/setup_selection.png" position="920,230" size="256,256" transparent="1" zPosition="2"/>
+		<!--eLabel name="DEBUG" text="W013" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+</skin>
