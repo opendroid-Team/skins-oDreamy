@@ -593,6 +593,11 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<ePixmap position="584,668" zPosition="1" size="109,34" pixmap="oDreamy/icons/hbbtv_off.png" alphatest="blend" transparent="0" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/hbbtv_on.png" position="584,668" size="109,34" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">HasHBBTV</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<!-- ***** CenterUp Meteo Panel ***** -->
 		<eLabel position="430,20"  size="430,80" backgroundColor="header"  zPosition="-1" />
 		<eLabel position="430,17"  size="120,5"  backgroundColor="bluette" zPosition="-1" />
@@ -620,6 +625,22 @@
 	</screen>
 	
 	<!-- ####  seondinfobar  DE ###### -->
+			<!-- Share Info -->
+		<widget source="session.CurrentService" render="Label" position="40,5" size="280,42" font="Regular;19" halign="left" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="6" >
+			<convert type="ODExtraInfo">E-C-N</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="135,5" size="580,42" font="Regular;19" halign="left" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
+			<convert type="ODExtraInfo">CamName</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="665,5" size="580,42" font="Regular;19" halign="right" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
+			<convert type="ODExtraInfo">NetInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="645,30" size="580,42" font="Regular;19" halign="left" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
+			<convert type="PliExtraInfo">CryptoSpecial</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="865,30" size="380,42" font="Regular;19" halign="right" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
+			<convert type="ODExtraInfo">EcmInfo</convert>
+		</widget>
 	<screen name="SecondInfoBar" position="0,0" size="1280,560" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,15" size="1280,500" pixmap="oDreamy/menu/eventnow-full.png" alphatest="blend" zPosition="3" /> 
 		<eLabel text="Now :" position="50,25" size="80,30" font="Regular;26" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="4"/>
@@ -1370,7 +1391,7 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="ServiceEvent" render="EGScrollLabel" position="225,480" size="585,120" font="Regular;19" halign="center" backgroundColor="#10101010" foregroundColor="#73c6ff" zPosition="2" transparent="1">
+		<widget source="ServiceEvent" render="ODScrollLabel" position="225,480" size="585,120" font="Regular;19" halign="center" backgroundColor="#10101010" foregroundColor="#73c6ff" zPosition="2" transparent="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!--eLabel name="Debug" text="S028" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
