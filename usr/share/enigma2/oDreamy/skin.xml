@@ -593,8 +593,8 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap position="584,668" zPosition="1" size="109,34" pixmap="oDreamy/icons/hbbtv_off.png" alphatest="blend" transparent="0" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/hbbtv_on.png" position="584,668" size="109,34" zPosition="2" alphatest="blend">
+		<ePixmap position="520,668" zPosition="1" size="109,34" pixmap="oDreamy/icons/hbbtv_off.png" alphatest="blend" transparent="0" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/hbbtv_on.png" position="520,668" size="109,34" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -940,13 +940,13 @@
 		<eLabel position="830,60" size="390,1"   backgroundColor="#10202020" zPosition="0" />
 
 		<!-- Event Name - Time -->
-		<eLabel text="Start Time :" position="935,75" size="120,22" font="Regular;20" backgroundColor="#101010" foregroundColor="yellow" transparent="1" zPosition="1" />
-		<widget source="ServiceEvent" render="Label" position="1055,75" size="75,22" font="Regular;20" halign="left" backgroundColor="#101010" transparent="1" zPosition="1" >
+		<eLabel text="Start Time :" position="980,75" size="120,22" font="Regular;20" backgroundColor="#101010" foregroundColor="yellow" transparent="1" zPosition="1" />
+		<widget source="ServiceEvent" render="Label" position="1100,75" size="75,22" font="Regular;20" halign="left" backgroundColor="#101010" transparent="1" zPosition="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
-		<eLabel text="End Time  :" position="935,110" size="120,22" font="Regular;20" backgroundColor="#101010" foregroundColor="yellow" transparent="1" zPosition="1" />
-		<widget source="ServiceEvent" render="Label" position="1056,110" size="75,22" font="Regular;20" foregroundColor="red" backgroundColor="#101010" transparent="1" zPosition="1" >
+		<eLabel text="End Time  :" position="980,110" size="120,22" font="Regular;20" backgroundColor="#101010" foregroundColor="yellow" transparent="1" zPosition="1" />
+		<widget source="ServiceEvent" render="Label" position="1100,110" size="75,22" font="Regular;20" foregroundColor="red" backgroundColor="#101010" transparent="1" zPosition="1" >
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
@@ -1082,7 +1082,7 @@
 		<eLabel position="430,596" size="293,5" backgroundColor="bluette" zPosition="-1" />
 		<ePixmap position="30,3" pixmap="oDreamy/menu/dmmlogo.png" size="50,45" alphatest="blend" zPosition="1" />
 		<widget source="Title" render="Label" position="105,11" size="600,40" font="Regular;26" halign="center" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
-		<ePixmap position="50,13" pixmap="Dreamy/icons/list.png"      size="45,30" alphatest="blend" zPosition="2" />
+		<ePixmap position="50,13" pixmap="oDreamy/icons/list.png"      size="45,30" alphatest="blend" zPosition="2" />
 		<eLabel position="511,85" size="2,480"  backgroundColor="#202020" zPosition="0" />
 		<!-- Small Body -->
 		<eLabel position="25,60"   size="700,540" backgroundColor="header"    zPosition="0" />
@@ -2982,7 +2982,7 @@
 		<panel name="p900_Logo"/>
 		<panel name="p900_Date"/>
 		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
-		<widget name="text"     position="50,100" size="685,30" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" halign="left" transparent="1"/>
+		<widget name="text"     position="50,100" size="685,30" font="Regular;36" foregroundColor="ltbluette" backgroundColor="header" halign="left" transparent="1"/>
 		<widget name="list"     position="50,100" size="685,500" itemHeight="50" scrollbarMode="showOnDemand" backgroundColor="header" zPosition="1"/>
 		<ePixmap position="780,440" size="300,300" pixmap="menu/plugin_selection.png" alphatest="blend"/>
 		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
