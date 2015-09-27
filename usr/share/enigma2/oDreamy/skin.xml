@@ -2982,7 +2982,7 @@
 		<panel name="p900_Logo"/>
 		<panel name="p900_Date"/>
 		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
-		<widget name="text"     position="50,100" size="685,30" font="Regular;36" foregroundColor="ltbluette" backgroundColor="header" halign="left" transparent="1"/>
+		<widget name="text"     position="50,100" size="685,30" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" halign="left" transparent="1"/>
 		<widget name="list"     position="50,100" size="685,500" itemHeight="50" scrollbarMode="showOnDemand" backgroundColor="header" zPosition="1"/>
 		<ePixmap position="780,440" size="300,300" pixmap="menu/plugin_selection.png" alphatest="blend"/>
 		<ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
@@ -3022,13 +3022,15 @@
 		<panel name="p800_Template" />
 		<panel name="p800_Date"/>
 		<panel name="M"/>
-                <panel name="nkRG"/>
-                <panel name="sR"/>
-		<ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
+                <ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
 		<ePixmap pixmap="box/maxbar.png" position="600,100" size="10,500" zPosition="2" alphatest="blend"/>
 		<widget name="list" position="50,100" size="560,500" font="Regular;26" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1"/>
 		<ePixmap position="650,440" size="300,300" pixmap="menu/plugin_selection.png" alphatest="blend"/>
-		<!--eLabel name="Debug" text="S103" position="40,25" size="500,50" font="Regular;48" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+		<ePixmap position="40,655"  pixmap="oDreamy/buttons/redpanel.png"    size="22,22" alphatest="blend" zPosition="2" />
+		<ePixmap position="370,655" pixmap="oDreamy/buttons/greenpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
+		<widget name="red"    position="70,638"  size="250,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+		<widget name="green"  position="400,638" size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+		<!-- eLabel name="Debug" text="P043" position="40,5" size="500,50" font="Regular;48" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
 	
 	<!-- Software Manager -->
