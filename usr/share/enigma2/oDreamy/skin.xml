@@ -143,13 +143,21 @@
 		<widget name="UnhandledKeyPixmap" pixmap="oDreamy/skin_default/unhandled-key.png" position="0,0" size="38,50" alphatest="off" />
 	</screen>
 
-	<!-- Subtitle area -->
-	<screen name="SubtitleDisplay" position="fill" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder" />
-
 	<!-- Reboot -->
-	<screen name="TryQuitMainloop" position="fill" backgroundColor="#30000000" flags="wfNoBorder" >
-		<ePixmap pixmap="oDreamy/menu/dreamyby.png" position="center,100" size="380,260" alphatest="blend" zPosition="2"/>
-	</screen>
+	<screen name="TryQuitMainloop" position="fill" flags="wfNoBorder" />
+	
+	<!-- Restart Panel -->
+        <screen name="QuitMainloopScreen" position="fill" backgroundColor="black" flags="wfNoBorder">
+		<ePixmap position="center,155" size="390,360" pixmap="oDreamy/menu/dreamybk.png" zPosition="1" alphatest="blend" />
+		<eLabel  text="Restarting System Opendroid Please Wait..." position="center,500" size="1920,70" font="Regular;45" halign="left" backgroundColor="#10000000" foregroundColor="ltbluette" transparent="1" zPosition="1"/>
+		<!-- ePixmap position="0,0" size="1920,1080" pixmap="oDreamy/menu/logout.png" zPosition="2" /-->
+		<!-- eLabel name="Debug" text="S000" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+        </screen>
+
+	<!-- Subtitle area  -->
+	<screen name="SubtitleDisplay" position="fill" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder" >
+		<!-- eLabel name="Debug" text="S002" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+        </screen>
 
 	<!-- Scart -->
 	<screen name="Scart" position="fill" backgroundColor="transparent"/>
@@ -630,7 +638,7 @@
 		<widget source="session.CurrentService" render="Label" position="665,5" size="580,42" font="Regular;19" halign="right" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
 			<convert type="ODExtraInfo">NetInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="645,30" size="580,42" font="Regular;19" halign="right" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
+		<widget source="session.CurrentService" render="Label" position="645,30" size="580,42" font="Regular;19" halign="left" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
 			<convert type="PliExtraInfo">CryptoSpecial</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="865,30" size="380,42" font="Regular;19" halign="right" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
