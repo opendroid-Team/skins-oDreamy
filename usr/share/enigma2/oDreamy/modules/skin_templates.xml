@@ -234,6 +234,64 @@
 		</widget>				
 	</screen>
 
+	<!-- P800 Template  -->
+	<screen name="p800_TemplateSlim" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<!-- 800p Upper Panel -->
+		<eLabel position="50,30"    size="1200,95" backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="50,30"    size="1200,2"  backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="50,30"    size="2,95"    backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="50,125"   size="1202,1"  backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="1250,30"  size="2,95"    backgroundColor="bluette"   zPosition="-1" />
+		<!-- Code -->
+		<ePixmap position="48,28" size="52,52" pixmap="oDreamy/buttons/angle30.png" alphatest="blend" zPosition="2" />
+		<ePixmap position="75,50" size="52,70" pixmap="oDreamy/icons/list.png"      alphatest="blend" zPosition="2" />
+		<widget source="Title" render="Label" position="150,30" size="900,95" font="Regular;36" halign="left" valign="center" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<!-- Middle -->
+		<eLabel position="50,140"   size="1200,800" backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="50,136"   size="860,10"   backgroundColor="bluette"   zPosition="0"  />
+		<eLabel position="50,140"   size="1200,2"   backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="50,140"   size="2,800"    backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="1250,140" size="2,800"    backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="50,940"   size="1200,2"   backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="900,937"  size="352,10"   backgroundColor="bluette" zPosition="0"  />
+		<!-- Footer -->
+		<eLabel position="50,955"   size="1200,95"  backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="50,955"   size="1200,2"   backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="50,955"   size="2,95"     backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="1520,955" size="250,2"     backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="1260,955" size="250,95"   backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="1260,955" size="250,2"    backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="1260,955" size="2,95"     backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="1520,955" size="350,95"   backgroundColor="#20000000" zPosition="-1" />
+		<eLabel position="1520,955" size="350,2"    backgroundColor="bluette"   zPosition="-1" />
+		<eLabel position="1520,955" size="2,95"     backgroundColor="bluette"   zPosition="-1" />
+		<!-- Analogic Clock -->
+		<widget source="global.CurrentTime" render="Watches" position="1539,974" size="60,60" zPosition="4" foregroundColor="#505050"   alphatest="blend" >
+			<convert type="ExtraNumText">secHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Watches" position="1539,973" size="60,60" zPosition="3" foregroundColor="ltbluette" alphatest="blend">
+			<convert type="ExtraNumText">minHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Watches" position="1544,979" size="50,50" zPosition="2" foregroundColor="red"     alphatest="blend">
+			<convert type="ExtraNumText">hourHand</convert>
+		</widget>
+		<!-- Clock %d.%m.%Y - %H:%M:%S --> 
+		<ePixmap position="1275,975" size="90,60"   pixmap="oDreamy/icons/select.png"    alphatest="blend" zPosition="2" />
+		<ePixmap position="1535,970" size="80,80"   pixmap="oDreamy/icons/clock50.png"   alphatest="blend" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="1610,955" size="250,95" font="Regular;55" halign="right" valign="center" foregroundColor="#505050" backgroundColor="#10101010" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>				
+	</screen>
+
+	<!-- P800 Extensions  -->
+	<screen name="p800_Ext" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<eLabel position="1260,30"  size="610,95"  backgroundColor="#20000000" zPosition="-2" />
+		<eLabel position="1260,30"  size="610,2"   backgroundColor="bluette" zPosition="-2" />
+		<eLabel position="1260,30"  size="2,95"    backgroundColor="bluette" zPosition="-2" />
+		<eLabel position="1260,125" size="610,2"   backgroundColor="bluette" zPosition="-2" />
+		<eLabel position="1260,140" size="610,802" backgroundColor="#201b3c85" zPosition="-2" />
+	</screen>
+
 	<!-- P800 Logo DRE -->
 	<screen name="p800_Logo" position="fill" title="Menu Information" backgroundColor="#FF000000" flags="wfNoBorder" >
 		<!-- Logo -->
