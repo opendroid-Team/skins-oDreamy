@@ -149,7 +149,7 @@
 	<!-- Restart Panel -->
         <screen name="QuitMainloopScreen" position="fill" backgroundColor="black" flags="wfNoBorder">
 		<ePixmap position="center,155" size="390,360" pixmap="oDreamy/menu/dreamybk.png" zPosition="1" alphatest="blend" />
-		<eLabel  text="Restarting System Opendroid Please Wait..." position="center,500" size="1920,70" font="Regular;45" halign="left" backgroundColor="#10000000" foregroundColor="ltbluette" transparent="1" zPosition="1"/>
+		<widget name="text" position="center,500" size="720,100" font="Regular;25" halign="center" backgroundColor="#10000000" foregroundColor="ltbluette" transparent="1" zPosition="1"/>
 		<!-- ePixmap position="0,0" size="1920,1080" pixmap="oDreamy/menu/logout.png" zPosition="2" /-->
 		<!-- eLabel name="Debug" text="S000" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
         </screen>
