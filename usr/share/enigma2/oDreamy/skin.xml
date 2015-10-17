@@ -1480,6 +1480,157 @@
 		<widget source="key_green" render="Label" position="270,627" size="200,40" zPosition="5" backgroundColor="bluette" font="Regular;21" transparent="1" />
 		<!-- eLabel name="Debug" text="P016" position="40,5" size="500,50" font="Regular;48" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
+
+	<!-- Timer Conflict -->
+	<screen name="TimerSanityConflict" title="Timer sanity error" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template"/>
+		<panel name="p800_Logo"/>
+		<panel name="p800_DateMid"/>
+		<panel name="nRYB"/>
+		<widget name="list"   position="70,180" size="820,360" font="Regular;32" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1"/>
+		<widget name="timer1" position="70,540" size="820,180" font="Regular;32" itemHeight="45" scrollbarMode="showNever"    backgroundColor="header" transparent="1"/>
+		<widget name="timer2" position="70,780" size="820,100" font="Regular;32" itemHeight="45" scrollbarMode="showNever"    backgroundColor="header" transparent="1"/>
+		<ePixmap position="950,645" size="256,256" pixmap="menu/timer_edit.png" alphatest="blend"/>
+		<!-- eLabel name="Debug" text="S119" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- Timer Selection -->
+	<screen name="TimerSelection" title="Timer selection" position="fill" flags="wfNoBorder">
+		<panel name="p800_Template"/>
+		<panel name="p800_Logo"/>
+		<panel name="p800_DateMid"/>
+		<widget name="timerlist"   position="70,180" size="820,750" font="Regular;32" itemHeight="75" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1"/>
+		<ePixmap position="950,645" size="256,256" pixmap="menu/timer_edit.png" alphatest="blend"/>
+		<ePixmap position="60,970"  size="700,90"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+		<!-- eLabel name="DEBUG" text="S120" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- RecordTimerQuestions -->
+	<screen name="RecordTimerQuestion" position="100,100" size="800,380" backgroundColor="#20000000" zPosition="5">
+		<widget name="text" position="10,30" size="780,45" font="Regular;32" backgroundColor="header" transparent="1" zPosition="3" />
+		<widget name="list" position="10,90" size="780,320" font="Regular;32" enableWrapAround="1" backgroundColor="header" transparent="1" />
+		<!-- eLabel name="Debug" text="S121" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- RemoveTimerQuestions -->
+	<screen name="RemoveTimerQuestion" position="center,center" size="700,240" backgroundColor="#20000000" zPosition="5" >
+		<widget name="text" position="10,10" size="680,40" font="Regular;32" backgroundColor="header" transparent="3" />
+		<widget name="list" position="10,70" size="680,180" font="Regular;32" itemHeight="45" enableWrapAround="1" backgroundColor="header" transparent="1" />
+		<applet type="onLayoutFinish">
+			self.autoResize()
+		</applet>
+		<!-- eLabel name="Debug" text="S122" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- EPG Selection --> 
+	<screen name="EPGSelection" title="EPG Selection" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template"/>
+		<panel name="nRGYB"/>
+		<panel name="MI"/>
+		<ePixmap pixmap="box/maxbar.png" position="805,100" size="15,505" zPosition="2" alphatest="blend"/>
+		<widget name="list" position="50,100" size="765,505" itemHeight="30" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="number" position="170,1100" size="500,60" font="Regular;34" valign="center" halign="left" foregroundColor="#73c6ff" backgroundColor="transparent" transparent="1" borderColor="black" borderWidth="2"/>
+		<widget name="lab1"   position="50,1100"  size="150,30" font="Regular;24" foregroundColor="#73c6ff" backgroundColor="header" transparent="1"/>
+		<!--eLabel name="Debug" text="S029" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- EPG Selection Multi -->
+	<screen name="EPGSelectionMulti" title="EPG Selection" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="p800_Template"/>
+		<panel name="p800_Ext"/>
+		<panel name="nRGYB"/>
+		<panel name="p800_Date" />
+		<panel name="MI"/>
+		<widget name="now_button"      pixmap="buttons/epg_off.png"     position="70,160"  size="200,40" alphatest="blend" zPosition="2"/>
+		<widget name="now_button_sel"  pixmap="buttons/epg_now_on.png"  position="70,160"  size="200,40" alphatest="blend" zPosition="3"/>
+		<widget name="now_text"        text="NOW"  size="200,40"        position="70,161"  font="Regular;30" valign="center" halign="center" backgroundColor="bluette" zPosition="4" transparent="1"/>
+		<widget name="next_button"     pixmap="buttons/epg_off.png"     position="420,160" size="200,40" alphatest="blend" zPosition="2"/>
+		<widget name="next_button_sel" pixmap="buttons/epg_next_on.png" position="420,160" size="200,40" alphatest="blend" zPosition="3"/>
+		<widget name="next_text"       text="NEXT" size="200,40"        position="420,161" font="Regular;30" valign="center" halign="center" backgroundColor="bluette" zPosition="4" transparent="1"/>
+		<widget name="more_button"     pixmap="buttons/epg_off.png"     position="710,160" size="200,40" alphatest="blend" zPosition="2"/>
+		<widget name="more_button_sel" pixmap="buttons/epg_next_on.png" position="710,160" size="200,40" alphatest="blend" zPosition="3"/>
+		<widget name="more_text"       text="MORE" size="200,40"        position="710,161" font="Regular;30" valign="center" halign="center" backgroundColor="bluette" zPosition="4" transparent="1"/>
+		<eLabel position="70,220" size="1165,1" backgroundColor="#10202020" zPosition="2"/>
+		<eLabel position="70,222" size="1165,1" backgroundColor="#10404040" zPosition="2"/>
+		<ePixmap pixmap="oDreamy/box/maxbar.png" position="1230,240" size="10,690" zPosition="2" alphatest="blend"/>
+		<widget name="list" position="70,240" size="1170,690" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" />
+		<!-- Event Name -->
+		<widget source="Event" render="Label" position="1280,160" size="600,60" font="Regular; 34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="2" >
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- Time -->
+		<widget source="Event" render="Label" position="1280,240" size="160,40" font="Regular;32" halign="left" foregroundColor="ltbluette" backgroundColor="bluette" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
+		</widget>
+		<widget source="Event" render="Label" position="1700,240" size="160,40" font="Regular;32" halign="right" foregroundColor="red" backgroundColor="bluette" transparent="1" zPosition="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<eLabel position="1280,290" size="580,1" backgroundColor="grey" zPosition="1"/>
+		<widget source="Event" render="Progress" position="1280,288" size="580,5" backgroundColor="white" borderWidth="0" foregroundColor="ltbluette" transparent="1" zPosition="2">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="Event" render="ODScrollLabel" position="1280,340" size="580,480" font="Regular;30" halign="center" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1" >
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<!-- eLabel name="Debug" text="S124" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- GraphicalEPG -->
+	<screen name="GraphicalEPGPIG" title="E.P Guide" position="fill" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p800_Template"/>
+		<panel name="p800_Ext"/>
+		<panel name="p800_Date"/>
+		<panel name="sRGYB"/>
+		<panel name="MI"/>
+		<eLabel position="1260,140" size="610,260" backgroundColor="#10101010" zPosition="0" />
+		<eLabel position="1260,400" size="610,10"  backgroundColor="#FF101010" zPosition="0" />
+		<!-- Channels + Bar -->
+		<widget name="timeline_text" position="60,170" size="1180,80" font="Regular;28"  selectionDisabled="1" foregroundColor="ltbluette" backgroundColor="bluette" transparent="1"/>
+		<widget name="list" position="60,220" size="1180,700" itemHeight="70" scrollbarMode="showNever" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" EntryBorderColor="grey"  transparent="1"/>
+		<!-- Bouquet -->
+		<widget name="lab1" position="70,225" size="1150,390" halign="center" transparent="0" valign="center" zPosition="20"/>
+		<widget name="timeline_now" position="80,214" size="13,700" pixmap="epg/timeline-now2.png" alphatest="blend" zPosition="21"/>
+		<!-- Time -->
+		<widget name="bouquetlist"  position="60,180" size="1180,80" itemHeight="35" scrollbarMode="showNever" foregroundColor="red" backgroundColor="header" transparent="0" zPosition="4"/>
+		<widget name="timeline_now" position="2,220"  size="19,700"  pixmap="epg/timeline-now.png" alphatest="on" zPosition="3"/>
+		<widget source="global.CurrentTime" render="Label" position="1260,35" size="500,40" font="RegularLight; 32" foregroundColor="red" halign="left" transparent="1" zPosition="10">
+			<convert type="ClockToText">Format:%A %d %B</convert>
+		</widget>
+		<widget name="timeline0" pixmap="boh/timeline.png" position="0,220" size="2,700" zPosition="1"/>
+		<widget name="timeline1" pixmap="boh/timeline.png" position="0,220" size="2,700" zPosition="1"/>
+		<widget name="timeline2" pixmap="boh/timeline.png" position="0,220" size="2,700" zPosition="1"/>
+		<widget name="timeline3" pixmap="boh/timeline.png" position="0,220" size="2,700" zPosition="1"/>
+		<widget name="timeline4" pixmap="boh/timeline.png" position="0,220" size="2,700" zPosition="1"/>
+		<widget name="timeline5" pixmap="boh/timeline.png" position="0,220" size="2,700" zPosition="1"/>
+		<!-- Event Name -->
+		<widget source="Event" render="Label" position="1280,310" size="570,80" font="Regular;32" foregroundColor="#b0b0b0" backgroundColor="#101010" halign="center" valign="center" transparent="1" zPosition="1" >
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- Pig -->
+		<eLabel position="1275,145" size="230,142" backgroundColor="#303030" zPosition="0"/>
+		<widget source="session.VideoPicture" render="Pig" position="1277,147" size="226,138" zPosition="1" backgroundColor="#df0b1300"/>
+		<!-- Event Name - Time -->
+		<eLabel text="Start Time :"                  position="1540,165" size="200,40" font="Regular;32" halign="left" backgroundColor="header" foregroundColor="yellow" transparent="1" zPosition="1" />
+		<widget source="Event" render="Label" position="1730,165" size="200,40" font="Regular;32" halign="left" backgroundColor="header" transparent="1" zPosition="1" >
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<eLabel text="End Time   :"                  position="1540,220" size="200,40" font="Regular;32" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1" />
+		<widget source="Event" render="Label" position="1730,220" size="200,40" font="Regular;32" foregroundColor="red"    backgroundColor="header" transparent="1" zPosition="1" >
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="Event" render="Progress" position="1275,300" pixmap="eDreamy-FHD/skin_default/progress_medium.png" size="580,5" borderWidth="1" borderColor="#202020" zPosition="1" >
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- FullDescription  Interlinea 23 size 450 -->
+		<widget source="Event" render="ODScrollLabel" position="1270,420" size="590,420" font="Regular;32" foregroundColor="a0a0a0" backgroundColor="bluette" valign="top" halign="center" noWrap="1" transparent="1" zPosition="1" >
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<!-- eLabel name="Debug" text="S125" position="40,45" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
 	
 	<!-- EPG Search -->
 	<screen name="EPGSearch" title="EPG Search" position="fill" backgroundColor="transparent" flags="wfNoBorder">
@@ -1491,11 +1642,12 @@
 		<widget source="global.CurrentTime" render="Label" position="570,31" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
 			<convert type="ClockToText">Format %A %B %d</convert>
 		</widget>
-		<eLabel text="EPG" position="995,26" size="230,60" font="Regular;36" foregroundColor="ltbluette" halign="center" backgroundColor="bluette" transparent="1" zPosition="2"/>
+		<eLabel text="EPG" position="990,26" size="270,60" font="Regular;25" foregroundColor="ltbluette" halign="center" backgroundColor="bluette" transparent="1" zPosition="2"/>
 		<widget name="list" position="50,100" size="910,510" itemHeight="30" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget source="Event" render="EGScrollLabel" position="983,100" size="260,480" font="Regular; 20" halign="center" foregroundColor="#73c6ff" backgroundColor="bluette" transparent="1" zPosition="3" >
+		<widget source="Event" render="ODScrollLabel" position="983,100" size="260,480" font="Regular; 20" halign="center" foregroundColor="#73c6ff" backgroundColor="bluette" transparent="1" zPosition="3" >
 			<convert type="EventName">FullDescription</convert>
 		</widget>
+		<ePixmap pixmap="picon_default.png" position="1280,150" size="220,132" alphatest="blend" zPosition="2" />
 		<widget name="number" position="990,500" size="250,100" font="Regular;34" halign="left" foregroundColor="ltbluette" backgroundColor="bluette" transparent="1" zPosition="5" />
 		<!--eLabel name="Debug" text="S030" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
@@ -1552,7 +1704,7 @@
 		<widget source="Event" render="Progress" position="840,168" size="395,5" backgroundColor="white" borderWidth="0" foregroundColor="bluette" transparent="1" zPosition="2">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="Event" render="EGScrollLabel" position="840,190" size="400,410" font="Regular;22" halign="center" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1" >
+		<widget source="Event" render="ODScrollLabel" position="840,190" size="400,410" font="Regular;22" halign="center" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1" >
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<!--eLabel name="Debug" text="S032" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
@@ -4189,3 +4341,4 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 			</applet>
 	</screen>
 </skin>
+
