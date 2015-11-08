@@ -515,16 +515,6 @@
 		<widget source="session.CurrentService" render="Label" position="889,540" size="60,22" font="Regular;20" halign="left"  foregroundColor="#ffffff" backgroundColor="header" transparent="1" zPosition="3" >
 			<convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>
-		
-		<!-- Emu Info -->
- 		<widget source="session.CurrentService" render="Label" text="Emu Info" position="998,2540" size="250,34" font="Regular;20" halign="right" foregroundColor="#10101010" backgroundColor="header" transparent="1" zPosition="3" >
-			<convert type="PliExtraInfo">EmuInfoCrypt</convert>
-		</widget>
-
-		<!-- Emu Info -->
- 		<widget source="session.CurrentService" render="Label" text="Share :" position="848,540" size="400,34" font="Regular;20" halign="right" foregroundColor="#505050" backgroundColor="header" transparent="1" zPosition="6" >
-			<convert type="PliExtraInfo">EmuInfoCryptSpecial</convert>
-		</widget>
 		<!-- Picon -->
 		<widget source="session.CurrentService" render="Picon" position="35,575" size="130,80" alphatest="blend" zPosition="1" >
 			<convert type="ServiceName">Reference</convert>
@@ -626,74 +616,77 @@
 		</widget>
 		<!--eLabel name="Debug" text="S021" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
-	
-	<!-- ####  seondinfobar  DE ###### -->
-			<!-- Share Info -->
-		<widget source="session.CurrentService" render="Label" position="40,5" size="280,42" font="Regular;19" halign="left" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="6" >
-			<convert type="ODExtraInfo">E-C-N</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="135,5" size="580,42" font="Regular;19" halign="left" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
-			<convert type="ODExtraInfo">CamName</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="665,5" size="580,42" font="Regular;19" halign="right" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
-			<convert type="ODExtraInfo">NetInfo</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="645,30" size="580,42" font="Regular;19" halign="left" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
-			<convert type="PliExtraInfo">CryptoSpecial</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="865,30" size="380,42" font="Regular;19" halign="right" foregroundColor="#73c6ff" backgroundColor="header" transparent="1" zPosition="6" >
-			<convert type="ODExtraInfo">EcmInfo</convert>
-		</widget>
-	<screen name="SecondInfoBar" position="0,0" size="1280,560" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap position="0,15" size="1280,500" pixmap="oDreamy/menu/eventnow-full.png" alphatest="blend" zPosition="3" /> 
-		<eLabel text="Now :" position="50,25" size="80,30" font="Regular;26" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="4"/>
+
+	<!-- seondinfobar -->
+	<screen name="SecondInfoBar" position="fill" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="InfoBar"/>
+		<ePixmap pixmap="oDreamy/menu/eventnow.png" position="0,110" size="1280,500" alphatest="blend" transparent="1" zPosition="3" />
+		<eLabel text="Now :" position="63,115" size="80,45" font="Regular;22" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="4"/>
 		<!-- Event start & end times, and time remaining -->
-		<widget source="session.Event_Now" render="Label" position="140,25" size="100,30" halign="left" font="Regular; 26" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" >
+		<widget source="session.Event_Now" render="Label" position="140,115" size="100,30" halign="left" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="225,27" size="20,26" halign="left" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" />
-		<widget source="session.Event_Now" render="Label" position="250,25" size="100,30" halign="left" font="Regular; 26" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="4"  >
+		<eLabel text="-" position="225,115" size="20,26" halign="left" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" />
+		<widget source="session.Event_Now" render="Label" position="250,115" size="100,30" halign="left" font="Regular; 22" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="4"  >
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert> 
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="350,25" size="130,30" font="Regular; 26" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4"  >
+		<widget source="session.Event_Now" render="Label" position="350,115" size="130,30" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4"  >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<!-- Event name -->
-		<widget source="session.Event_Now" render="Label" position="50,60" size="520,80" font="Regular; 26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" zPosition="4" >
+		<widget source="session.Event_Now" render="Label" position="50,118" size="520,80" font="Regular; 22" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" zPosition="4" >
 			<convert type="EventName">Name</convert>
 		</widget>		
-		<eLabel position="50,140" size="565,1" backgroundColor="#10202020" zPosition="4" />
+		<eLabel position="50,150" size="565,1" backgroundColor="#10202020" zPosition="4" />
 		<!-- Event extended description -->
-		<widget source="session.Event_Now" render="Label" position="65,155" size="540,335" font="Regular; 22" halign="center" valign="top" foregroundColor="white" backgroundColor="#10101010" transparent="1" zPosition="4" >
+		<widget source="session.Event_Now" render="Label" position="65,170" size="540,335" font="Regular; 22" halign="center" valign="top" foregroundColor="white" backgroundColor="#10101010" transparent="1" zPosition="4" >
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<eLabel text="Next :" position="660,25" size="80,30" font="Regular;26" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="3"/>
+		<!-- EMU Info -->
+		<eLabel position="0,0"  size="1280,110" backgroundColor="#ffffffff" zPosition="5" />
+		<eLabel position="0,0"  size="1280,60"  backgroundColor="#20000000" zPosition="5" />
+		<eLabel position="0,58" size="1280,5"   backgroundColor="bluette"   zPosition="5" />
+		<eLabel position="0,0"  size="1280,1"   backgroundColor="bluette"   zPosition="5" />
+		<eLabel position="0,58" size="128,1"    backgroundColor="bluette"   zPosition="5" />
+		<widget source="session.CurrentService" render="Label" position="15,20" size="680,70" font="Regular;18" halign="left" noWrap="1" foregroundColor="#00ffc000" backgroundColor="header" transparent="1" zPosition="10">
+  <convert type="DMCHDCaidDisplay">Default</convert>
+		</widget>
+		<eLabel text="Next :" position="687,115" size="80,45" font="Regular;22" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="3"/>
 		<!-- Event start & end times, and duration -->
-		<widget source="session.Event_Next" render="Label" position="750,25" size="100,30" font="Regular; 26" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" >
+		<widget source="session.Event_Next" render="Label" position="765,115" size="100,30" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="835,27" size="20,26" halign="left" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" />
-		<widget source="session.Event_Next" render="Label" position="860,25" size="100,30" halign="left" font="Regular; 26" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="4" >
+		<eLabel text="-" position="835,115" size="20,26" halign="left" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" />
+		<widget source="session.Event_Next" render="Label" position="860,115" size="100,30" halign="left" font="Regular; 22" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="4" >
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="955,25" size="130,30" font="Regular; 26" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" >
+		<widget source="session.Event_Next" render="Label" position="955,115" size="130,30" font="Regular; 22" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="4" >
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<!-- Event name -->
-		<widget source="session.Event_Next" render="Label" position="665,60" size="570,80" halign="center"  font="Regular; 24" valign="center" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" zPosition="4" >
+		<widget source="session.Event_Next" render="Label" position="665,118" size="570,80" halign="center"  font="Regular; 22" valign="center" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" zPosition="4" >
 			<convert type="EventName">Name</convert>
 		</widget>
 		<eLabel position="665,140" size="570,1" backgroundColor="#10202020" zPosition="4" />
 		<!-- Event extended description -->
-		<widget source="session.Event_Next" render="Label" position="665,155" size="570,335" font="Regular; 22" halign="center" valign="top" foregroundColor="white" backgroundColor="#10101010" transparent="1" zPosition="4" >5
+		<widget source="session.Event_Next" render="Label" position="665,170" size="570,335" font="Regular; 22" halign="center" valign="top" foregroundColor="white" backgroundColor="#10101010" transparent="1" zPosition="4" >5
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
+		<!-- EMU Info -->
+		<eLabel position="0,0"  size="1280,110" backgroundColor="#ffffffff" zPosition="5" />
+		<eLabel position="0,0"  size="1280,60"  backgroundColor="#20000000" zPosition="5" />
+		<eLabel position="0,58" size="1280,5"   backgroundColor="bluette"   zPosition="5" />
+		<eLabel position="0,0"  size="1280,1"   backgroundColor="bluette"   zPosition="5" />
+		<eLabel position="0,58" size="128,1"    backgroundColor="bluette"   zPosition="5" />
+		<widget source="session.CurrentService" render="Label" position="693,0" size="680,70" font="Regular;18" halign="left" noWrap="1" foregroundColor="#00ffc000" backgroundColor="header" transparent="1" zPosition="10">
+  <convert type="PliExtraInfo">All</convert>
+  </widget>
 	</screen>
 
 	<!-- Mediaplayer OK --> 
