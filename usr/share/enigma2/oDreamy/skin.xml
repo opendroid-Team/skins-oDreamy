@@ -515,6 +515,10 @@
 		<widget source="session.CurrentService" render="Label" position="889,540" size="60,22" font="Regular;20" halign="left"  foregroundColor="#ffffff" backgroundColor="header" transparent="1" zPosition="3" >
 			<convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>
+		<!-- Emu Info -->
+ 		<widget source="session.CurrentService" render="Label" position="848,540" size="400,34" font="Regular;20" halign="right" foregroundColor="#505050" backgroundColor="header" transparent="1" zPosition="6" >
+			<convert type="PliExtraInfo">CryptoBar</convert>
+		</widget>
 		<!-- Picon -->
 		<widget source="session.CurrentService" render="Picon" position="35,575" size="130,80" alphatest="blend" zPosition="1" >
 			<convert type="ServiceName">Reference</convert>
