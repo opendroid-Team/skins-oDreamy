@@ -1410,6 +1410,15 @@
 		<ePixmap position="376,28" zPosition="4" size="120,35" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/SHOUTcast/shoutcast-logo1-fs8.png" transparent="1" alphatest="on" />
 		<!--eLabel name="Debug" text="P017A" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
+	<screen name="oDreamySetup" position="center,center" size="900,340" title="Skin Controler">
+		<eLabel font="Regular; 26" foregroundColor="red" halign="center" position="55,308" size="134,26" text="Cancel" />
+		<eLabel font="Regular; 26" foregroundColor="green" halign="center" position="243,308" size="138,26" text="Save" />
+		<eLabel font="Regular; 26" foregroundColor="#ffff00" halign="center" position="440,308" size="131,26" text="Reboot" />
+		<widget name="config" position="5,5" scrollbarMode="showOnDemand" size="889,300" itemHeight="50" font="Regular; 34" />
+		<ePixmap position="402,308" pixmap="oDreamy/buttons/yellowpanel.png" size="30,30" alphatest="blend" zPosition="2" />
+		<ePixmap position="208,308" pixmap="oDreamy/buttons/greenpanel.png" size="30,30" alphatest="blend" zPosition="2" />
+		<ePixmap position="19,308" pixmap="oDreamy/buttons/redpanel.png" size="30,30" alphatest="blend" zPosition="2" />
+	</screen>
 	
 	<!-- **********  IPTV Player ********** -->
 

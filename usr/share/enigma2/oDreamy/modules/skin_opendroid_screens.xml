@@ -54,24 +54,6 @@
 		<!-- eLabel name="DEBUG" text="PE002" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-         <!--Infopanel-->
-	<screen name="Infopanel" flags="wfNoBorder" position="fill" backgroundColor="transparent" title="Info panel">
-		<widget name="Mlist" position="70,110" size="700,500" zPosition="1" itemHeight="50" font="screen_text; 20" scrollbarMode="showOnDemand" transparent="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" />
-		<!--eLabel name="Debug" text="S020" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
-		<widget name="label1" position="825,425" size="385,175" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
-		<panel name="M"/>
-                <panel name="p800_Template" />
-		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oDreamy/icons/console.png" transparent="1" alphatest="blend" />
-		<panel name="_oe-buttons_template1" />
-	</screen>
-	<screen name="Info" position="0,0" size="1280,720" title="Info" flags="wfNoBorder" backgroundColor="transparent">
-		<widget name="label2" position="70,47" foregroundColor="layer-a-title-foreground" size="525,50" font="global_title; 35" backgroundColor="layer-a-background" transparent="1" />
-		<widget name="label1" position="70,110" size="700,530" font="Console;16" zPosition="1" transparent="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground"/>
-		<panel name="M"/>
-                <panel name="p800_Template" />
-		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oDreamy/icons/console.png" transparent="1" alphatest="blend" />
-		<panel name="_oe-buttons_template1" />
-	</screen>
 
 	<!--  OPENDROID News About OKK -->
 	<screen name="OPENDROIDMainNews" position="fill" title="OPENDROID News" backgroundColor="transparent" flags="wfNoBorder">

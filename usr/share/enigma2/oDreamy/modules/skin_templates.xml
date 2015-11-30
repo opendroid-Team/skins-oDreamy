@@ -107,11 +107,6 @@
 		<panel name="MenuTemplate" />
 		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
 	</screen> 
-       <!-- Menu Infopanel DRE -->
-	<screen name="Menu_Infopanel" position="fill"  title="Menu Infopanel" backgroundColor="#FF000000" flags="wfNoBorder" >
-		<panel name="MenuTemplate" />
-		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
-	</screen> 
 
 	<!-- Menu Setup DRE -->
 	<screen name="menu_setup" position="fill" title="Main Menu Setup" backgroundColor="#FF000000" flags="wfNoBorder" >
