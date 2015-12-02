@@ -496,7 +496,7 @@
 			<convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>
 		<!-- Emu Info -->
- 		<widget source="session.CurrentService" render="Label" position="822,540" size="400,34" font="Regular;22" halign="right" foregroundColor="#505050" backgroundColor="header" transparent="1" zPosition="6" >
+ 		<widget source="session.CurrentService" render="Label" position="822,540" size="400,34" font="Regular;23" halign="right" foregroundColor="#505050" backgroundColor="header" transparent="1" zPosition="6" >
 			<convert type="PliExtraInfo">CryptoBar</convert>
 		</widget>
 		<!-- Picon -->
@@ -546,32 +546,32 @@
 		<widget name="key_yellow" position="480,673" size="110,28" backgroundColor="header" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 		<widget name="key_blue"   position="680,673" size="150,28" backgroundColor="header" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 		<!-- Teletext icon (is teletext available?) -->
-		<ePixmap pixmap="oDreamy/icons/ico_txt_off.png" position="893,668" size="46,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_txt_on.png" position="893,668" size="46,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="oDreamy/icons/ico_txt_off.png" position="945,668" size="46,30" zPosition="1" alphatest="blend" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_txt_on.png" position="945,668" size="46,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<!-- Videoformat icon (16:9?) -->
-		<ePixmap pixmap="oDreamy/icons/ico_format_off.png" position="965,668" size="50,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_format_on.png" position="965,668" size="50,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="oDreamy/icons/ico_format_off.png" position="1004,668" size="50,30" zPosition="1" alphatest="blend" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_format_on.png" position="1004,668" size="50,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<!-- HD icon -->
-		<ePixmap pixmap="oDreamy/icons/ico_hd_off.png" position="1045,668" size="50,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_hd_on.png" position="1045,668" size="50,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="oDreamy/icons/ico_hd_off.png" position="1067,668" size="50,30" zPosition="1" alphatest="blend" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_hd_on.png" position="1067,668" size="50,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<!-- Audio icon (is there multichannel audio?) -->
-		<ePixmap pixmap="oDreamy/icons/ico_dolby_off.png" position="1122,668" size="130,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_dolby_on.png" position="1122,668" size="130,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="oDreamy/icons/ico_dolby_off.png" position="1130,668" size="130,30" zPosition="1" alphatest="blend" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/ico_dolby_on.png" position="1130,668" size="130,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap position="802,668" zPosition="1" size="109,34" pixmap="oDreamy/icons/hbbtv_off.png" alphatest="blend" transparent="0" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/hbbtv_on.png" position="802,668" size="109,34" zPosition="2" alphatest="blend">
+		<ePixmap position="860,668" zPosition="1" size="109,34" pixmap="oDreamy/icons/hbbtv_off.png" alphatest="blend" transparent="0" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/hbbtv_on.png" position="860,668" size="109,34" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -635,7 +635,7 @@
 		<eLabel position="0,0"  size="1280,5"   backgroundColor="bluette"   zPosition="5" />
 		<eLabel position="0,100" size="1280,5"   backgroundColor="bluette"   zPosition="5" />
 		<widget source="session.CurrentService" render="Label" position="295,15" size="1000,70" font="Regular;18" halign="left" noWrap="1" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" zPosition="10">
-  <convert type="ODExtraInfo"/>
+  <convert type="DMCHDCaidDisplay">Default</convert>
 		</widget>
 		<eLabel text="Next :" position="687,115" size="80,45" font="Regular;22" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="3"/>
 		<!-- Event start & end times, and duration -->
