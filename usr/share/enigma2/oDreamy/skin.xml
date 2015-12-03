@@ -570,8 +570,8 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap position="860,668" zPosition="1" size="109,34" pixmap="oDreamy/icons/hbbtv_off.png" alphatest="blend" transparent="0" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/hbbtv_on.png" position="860,668" size="109,34" zPosition="2" alphatest="blend">
+		<ePixmap position="850,668" zPosition="1" size="109,34" pixmap="oDreamy/icons/hbbtv_off.png" alphatest="blend" transparent="0" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy/icons/hbbtv_on.png" position="850,668" size="109,34" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
