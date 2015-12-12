@@ -9,7 +9,7 @@
 	#      It is not allowed to make another modifications of this skin for other teams without     #
 	#      permissions from mmark and Dream Elite Team.                                             #
 	#                                                                                               #
- 	#      OpenDroid Team By formianodicastellone            15-09-2015                             #
+ #      OpenDroid Team By formianodicastellone            15-09-2015                             #
 	#      mmark             Version 1.3.1 released          04-01-2015                             #
 	#      mmark             Version 1.3.0 released          01-01-2015                             #                
 	#      mmark             Version 1.2.0 released          29-12-2014                             #
@@ -667,7 +667,7 @@
 		<eLabel position="0,0"  size="1280,100"  backgroundColor="#20000000" zPosition="5" />
 		<eLabel position="0,0"  size="1280,5"   backgroundColor="bluette"   zPosition="5" />
 		<eLabel position="0,100" size="1280,5"   backgroundColor="bluette"   zPosition="5" />
-		<widget source="session.CurrentService" render="Label" position="295,05" size="1000,70" font="Regular;20" halign="left" noWrap="1" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="10">
+		<widget source="session.CurrentService" render="Label" position="295,17" size="1000,70" font="Regular;16" halign="left" noWrap="1" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="10">
   <convert type="DMCHDCaidDisplay">Default</convert>
 		</widget>
 		<eLabel text="Next :" position="687,115" size="80,45" font="Regular;22" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="3"/>
@@ -699,7 +699,7 @@
 		<eLabel position="0,0"  size="1280,100"  backgroundColor="#20000000" zPosition="5" />
 		<eLabel position="0,0"  size="1280,5"   backgroundColor="bluette"   zPosition="5" />
 		<eLabel position="0,100" size="1280,5"   backgroundColor="bluette"   zPosition="5" />
-		<widget source="session.CurrentService" render="Label" position="295,28" size="1000,70" font="Regular;20" halign="left" noWrap="1" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="10">
+		<widget source="session.CurrentService" render="Label" position="295,43" size="1000,70" font="Regular;16" halign="left" noWrap="1" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="10">
   <convert type="PliExtraInfo">All</convert>
 		</widget>
 	</screen>
@@ -1439,7 +1439,7 @@
 			serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;20" serviceInfoFont="Regular;20" 
 			foregroundColor="#ffffff" foregroundColorSelected="#ffffff" backgroundColor="header" backgroundColorSelected="bluette"
 			colorServiceDescription="#49bbff" colorServiceDescriptionSelected="#a1daff" foregroundColorServiceNotAvail="#303030" 
-			colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="Dreamy/skin_default/progcl.png" />
+			colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="oDreamy/skin_default/progcl.png" />
 		<!-- Keys Buttons -->
 		<ePixmap position="40,628"  pixmap="oDreamy/buttons/redpanel.png"    size="22,22" alphatest="blend" zPosition="2" />
 		<ePixmap position="230,628" pixmap="oDreamy/buttons/greenpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
