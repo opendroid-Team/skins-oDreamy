@@ -35,7 +35,33 @@
 		<font name="Regular"     filename="/share/enigma2/oDreamy/fonts/verdana.ttf"   scale="93"/>
 		<font name="Replacement" filename="ae_AlMateen.ttf" scale="100" replacement="1"/>
 	</fonts>
-
+	<parameters>
+		<parameter name="FileListIcon" value="10,7,53,38"/>
+		<parameter name="FileListName" value="80,3,900,60"/>
+		<parameter name="FileListMultiLock" value="10,5,50,50"/>
+		<parameter name="FileListMultiIcon" value="70,5,50,50"/>
+		<parameter name="FileListMultiName" value="130,3,1000,60"/>
+		<parameter name="ChoicelistIcon" value="10,4,67,48"/>
+		<parameter name="ChoicelistDash" value="0,4,1000,60"/>
+		<parameter name="ChoicelistName" value="80,4,1000,60"/>
+		<parameter name="PluginBrowserIcon" value="10,8,150,60"/>
+		<parameter name="PluginBrowserName" value="180,0,40"/>
+		<parameter name="PluginBrowserDescr" value="180,38,35"/>
+		<parameter name="PluginBrowserDownloadIcon" value="10,0,90,75"/>
+		<parameter name="PluginBrowserDownloadName" value="120,0,40"/>
+		<parameter name="PluginBrowserDownloadDescr" value="120,38,35"/>
+		<parameter name="ServiceInfo" value="0,0,450,50"/>
+		<parameter name="ServiceInfoLeft" value="0,0,450,50"/>
+		<parameter name="ServiceInfoRight" value="450,0,1000,60"/>
+		<parameter name="SelectionListLock" value="10,5,35,35"/>
+		<parameter name="SelectionListLockOff" value="10,5,35,35"/>
+		<parameter name="SelectionListDescr" value="60,4,1000,60"/>
+		<parameter name="ConfigListSeperator" value="300"/>
+		<parameter name="VirtualKeyboard" value="68,68"/>
+		<parameter name="HelpMenuListHlp" value="0,0,900,60"/>
+		<parameter name="HelpMenuListExtHlp0" value="0,0,900,60"/>
+		<parameter name="HelpMenuListExtHlp1" value="0,42,900,60"/>
+	</parameters>
 	<!-- Colors --> 
 	<colors> 
 		<color name="background" value="#20000000"/>
@@ -383,7 +409,15 @@
 		<widget name="footnote" position="840,580" size="400,30" font="Regular;22" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
 		<!--eLabel name="Debug" text="S020" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
-
+       <!-- Infopanel OK -->
+	<screen name="Infopanel" position="fill" title="info panel" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="p800_Template" />
+		<panel name="p800_Logo" />
+                <widget name="Mlist" position="70,110" size="540,610" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
+                <ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+                <ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="INFO PANEL PA021" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
 	<!-- Main infobar -->
 	<screen name="InfoBar" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel position="0,540"   size="1280,180" backgroundColor="header" zPosition="-1" />
@@ -634,7 +668,7 @@
 		<!--eLabel name="Debug" text="S021" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
 
-	<!-- seondinfobar -->
+	<!-- SecondinfoBar -->
 	<screen name="SecondInfoBar" position="fill" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="InfoBar"/>
 		<ePixmap pixmap="oDreamy/menu/eventnow.png" position="0,110" size="1920,800" alphatest="on" transparent="1" zPosition="3" />
@@ -847,7 +881,7 @@
 		<widget source="hddA"          render="Label" position="60,420" size="580,45" font="Regular;22" foregroundColor="white"     backgroundColor="header" transparent="1" zPosition="2" />
 		<widget source="IPHeader"      render="Label" position="40,520" size="600,26" font="Regular;24" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="2" />
 		<widget source="ipA"           render="Label" position="60,550" size="580,45" font="Regular;22" foregroundColor="white"     backgroundColor="header" transparent="1" zPosition="2" />
-		<ePixmap pixmap="oDreamy/icons/dmm_logo.png" position="40,619" size="350,44" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="oDreamy/icons/opendroid_logo.png" position="40,619" size="350,44" alphatest="blend" zPosition="2" />
 		<ePixmap position="840,623" pixmap="oDreamy/icons/select.png" size="45,30" alphatest="blend" zPosition="2" />
 		<ePixmap position="980,620" pixmap="oDreamy/icons/clock50.png" size="35,35" alphatest="blend" zPosition="2" />
 		<!-- Clock %d.%m.%Y - %H:%M:%S -->
