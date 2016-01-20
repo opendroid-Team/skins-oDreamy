@@ -13,6 +13,8 @@
 	<!-- Video Wizzard DRE -->
 	<screen name="VideoWizard" title="Welcome..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<!-- Code -->
 		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
@@ -42,6 +44,8 @@
 	<!-- Language Wizzard DRE -->
 	<screen name="LanguageWizard" title="Language Selection..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<panel name="sRGYB"/>
 		<!-- Code -->
@@ -69,6 +73,8 @@
 	<!-- Position Wizzard DRE -->
 	<screen name="StartWizard" title="Start Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<!-- Code -->
 		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
@@ -97,6 +103,8 @@
 	<!-- Network Wizard DRE -->
 	<screen name="NetworkWizard" position="fill" title="Network Wizard" backgroundColor="#FF000000" flags="wfNoBorder" >
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<!-- Code -->
 		<widget name="wizard" position="1020,415" size="160,180" pixmap="oDreamy/menu/wizard.png" zPosition="1" />
@@ -130,6 +138,8 @@
 	<!-- Update Wizard DRE --> 
 	<screen name="InstallWizardIpkgUpdater" title="Update Wizard..." position="fill" backgroundColor="transparent0" flags="wfNoBorder" >
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<!-- Code -->
 		<ePixmap pixmap="icons/info_on.png" position="40,95" size="40,40" zPosition="10" alphatest="blend"/>
@@ -140,6 +150,8 @@
 	<!-- Restore Wizard DRE -->
 	<screen name="MessageBoxWizard" title="Message Wizard..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<!-- Code -->
 		<widget name="ErrorPixmap"    pixmap="icons/input_error.png"    position="50,100" size="53,53" alphatest="blend"/>
@@ -168,6 +180,8 @@
 	<!-- Image Wizard DRE -->
 	<screen name="ImageWizard" title="Image Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
 		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
@@ -196,6 +210,8 @@
 	<!-- Tutorial Wizard DRE -->
 	<screen name="TutorialWizard" title="Tutorial Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
 		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
@@ -210,6 +226,8 @@
 	<!-- Default SatList Wizard DRE -->
 	<screen name="DefaultSatLists" title="Default Sat Lists..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
 		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
@@ -238,6 +256,8 @@
 	<!-- Default Wizard DRE -->
 	<screen name="DefaultWizard" title="Default Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
 		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
@@ -273,6 +293,8 @@
 	<!-- CleanupWizard -->
 	<screen name="CleanupWizard" title="Cleanup Wizard..." position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
 		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
@@ -300,6 +322,8 @@
 	<!-- CleanupWizard Config -->
 	<screen name="CleanupWizardConfiguration" title="Cleanup Wizard Settings" position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="p900_Template"/>
+		<panel name="p900_Logo"/>
+		<panel name="p900_Ext"/>
 		<panel name="p900_Date"/>
 		<widget name="text"   position="50,100" size="690,270" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
 		<eLabel position="50,295" size="685,1" backgroundColor="#303030" zPosition="1" />
