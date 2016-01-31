@@ -1,2 +1,2 @@
 # skins-oDreamy
- by opendroid
+ by Opendroid
