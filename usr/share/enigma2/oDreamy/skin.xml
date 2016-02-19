@@ -3581,7 +3581,7 @@
 		<panel name="p900_Template" />
 		<panel name="p900_Logo"/>
 		<panel name="p900_Date"/>
-		<panel name="nRGY"/>
+		<panel name="nRGYB"/>
 		<widget name="imageList" position="50,100" size="685,505" font="Regular;20" backgroundColor="header" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
 		<ePixmap position="780,440" size="300,300" pixmap="menu/plugin_selection.png" alphatest="blend"/>
 		<!--eLabel name="Debug" text="S120" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
