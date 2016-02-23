@@ -702,7 +702,7 @@
 		<eLabel position="0,0"  size="1280,5"   backgroundColor="bluette"   zPosition="5" />
 		<eLabel position="0,100" size="1280,5"   backgroundColor="bluette"   zPosition="5" />
 		<widget source="session.CurrentService" render="Label" position="260,27" size="1000,70" font="Regular;22" halign="left" noWrap="1" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="10">
-                <convert type="DMCHDCaidDisplay">Default</convert>
+                <convert type="pCaidDisplay">Default</convert>
 		</widget>
 		<eLabel text="Next :" position="687,115" size="80,45" font="Regular;22" foregroundColor="yellow" backgroundColor="#10000000" transparent="1" zPosition="3"/>
 		<!-- Event start & end times, and duration -->
