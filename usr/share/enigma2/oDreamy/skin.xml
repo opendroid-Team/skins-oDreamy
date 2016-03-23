@@ -44,12 +44,12 @@
 		<parameter name="ChoicelistIcon" value="10,4,67,48"/>
 		<parameter name="ChoicelistDash" value="0,4,1000,60"/>
 		<parameter name="ChoicelistName" value="80,4,1000,60"/>
-		<parameter name="PluginBrowserIcon" value="10,8,150,60"/>
-		<parameter name="PluginBrowserName" value="180,0,40"/>
-		<parameter name="PluginBrowserDescr" value="180,38,35"/>
-		<parameter name="PluginBrowserDownloadIcon" value="10,0,90,75"/>
-		<parameter name="PluginBrowserDownloadName" value="120,0,40"/>
-		<parameter name="PluginBrowserDownloadDescr" value="120,38,35"/>
+		<parameter name="PluginBrowserIcon" value="10,5,100,40"/>
+		<parameter name="PluginBrowserName" value="120,5,25"/>
+		<parameter name="PluginBrowserDescr" value="120,26,17"/>
+		<parameter name="PluginBrowserDownloadIcon" value="10,0,60,50"/>
+		<parameter name="PluginBrowserDownloadName" value="80,5,25"/>
+		<parameter name="PluginBrowserDownloadDescr" value="80,26,17"/>
 		<parameter name="ServiceInfo" value="0,0,450,50"/>
 		<parameter name="ServiceInfoLeft" value="0,0,450,50"/>
 		<parameter name="ServiceInfoRight" value="450,0,1000,60"/>
@@ -3289,7 +3289,7 @@
 		<panel name="M"/>
   <ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
 		<ePixmap pixmap="box/maxbar.png" position="600,100" size="10,500" zPosition="2" alphatest="blend"/>
-		<widget name="list" position="50,100" size="560,500" font="Regular;26" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1"/>
+		<widget name="list" position="50,120" size="560,500" font="Regular;20" zPosition="5" scrollbarMode="showOnDemand" backgroundColor="header" transparent="1"/>
 		<ePixmap position="650,440" size="300,300" pixmap="menu/plugin_selection.png" alphatest="blend"/>
 		<ePixmap position="40,655"  pixmap="oDreamy/buttons/redpanel.png"    size="22,22" alphatest="blend" zPosition="2" />
 		<ePixmap position="370,655" pixmap="oDreamy/buttons/greenpanel.png"  size="22,22" alphatest="blend" zPosition="2" />
