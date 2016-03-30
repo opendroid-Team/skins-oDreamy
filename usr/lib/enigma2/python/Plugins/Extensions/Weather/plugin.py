@@ -697,7 +697,7 @@ class MeteoMain(Screen):
         return localfile
 
     def get_Url(self):
-        url = 'http://weather.yahooapis.com/forecastrss?w='
+        url = 'http://xml.weather.yahoo.com/forecastrss?w='
         url2 = '721943'
         if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Weather/Config/Location_id"):	
              url2=open("/usr/lib/enigma2/python/Plugins/Extensions/Weather/Config/Location_id").read()				
