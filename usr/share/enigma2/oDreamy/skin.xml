@@ -643,26 +643,26 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<!-- ***** CenterUp Meteo Panel ***** -->
-		<eLabel position="430,20"  size="430,80" backgroundColor="header"  zPosition="-1" />
+		<eLabel position="415,20"  size="460,82" backgroundColor="header"  zPosition="-1" />
 		<eLabel position="430,17"  size="120,5"  backgroundColor="bluette" zPosition="-1" />
 		<eLabel position="430,20"  size="430,1"  backgroundColor="bluette" zPosition="-1" />
 		<eLabel position="520,98"  size="340,5"  backgroundColor="bluette" zPosition="-1" />
 		<eLabel position="430,100" size="430,1"  backgroundColor="bluette" zPosition="-1" />
-		<widget source="session.CurrentService" render="PiconUni" path="Icons" position="430,20" size="80,80" zPosition="2" alphatest="blend">
+		<widget source="session.CurrentService" render="PiconUni" path="Icons" position="416,22" size="130,80" zPosition="2" alphatest="blend">
 			<convert type="YWeather">picon</convert>
 		</widget>
-		<ePixmap position="515,30" size="12,35" pixmap="oDreamy/icons/temp.png" alphatest="blend" zPosition="1" />
-		<widget source="session.CurrentService" render="Label" position="535,35" size="90,40" font="Regular; 30" halign="left" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="2" >
+		<ePixmap position="545,30" size="12,35" pixmap="oDreamy/icons/temp.png" alphatest="blend" zPosition="1" />
+		<widget source="session.CurrentService" render="Label" position="556,35" size="90,40" font="Regular; 24" halign="left" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="2" >
 			<convert type="YWeather">temp</convert>
 		</widget>
-		<ePixmap position="625,40" size="35,25" pixmap="oDreamy/icons/wind.png" alphatest="blend" zPosition="1" />
-		<widget source="session.CurrentService" render="Label" position="665,38" size="150,30" font="Regular; 22" halign="left" foregroundColor="ltbluette" backgroundColor="black" transparent="1" zPosition="2" >
+		<ePixmap position="645,40" size="35,25" pixmap="oDreamy/icons/wind.png" alphatest="blend" zPosition="1" />
+		<widget source="session.CurrentService" render="Label" position="690,38" size="150,30" font="Regular; 22" halign="left" foregroundColor="ltbluette" backgroundColor="black" transparent="1" zPosition="2" >
 			<convert type="YWeather">speed</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="795,38" size="60,28" font="Regular; 22" halign="left" foregroundColor="#FFFFFF" backgroundColor="background" transparent="1" zPosition="2" >
+		<widget source="session.CurrentService" render="Label" position="820,38" size="60,28" font="Regular; 22" halign="left" foregroundColor="#FFFFFF" backgroundColor="background" transparent="1" zPosition="2" >
 			<convert type="YWeather">direction</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="517,66" size="200,40" font="Regular; 24" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" >
+		<widget source="session.CurrentService" render="Label" position="547,66" size="200,40" font="Regular; 24" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" >
 			<convert type="YWeather">city</convert>
 		</widget>
 		<!--eLabel name="Debug" text="S021" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
