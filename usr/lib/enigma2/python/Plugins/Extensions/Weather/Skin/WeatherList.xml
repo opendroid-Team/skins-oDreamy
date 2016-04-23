@@ -1,6 +1,0 @@
-<screen name="WeaterCity" position="center,center" size="800,400" title="WeatherCity" backgroundColor="#10101010" >
-	<ePixmap position="10,359" size="529,41" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Weather/Skin/2colors.png" zPosition="2" alphatest="blend" />
-	<widget position="60,364" size="210,21" name="key_red" font="Regular;20" halign="left" backgroundColor="black" zPosition="1" transparent="1" />
-	<widget position="295,364" size="210,21" name="key_green"  font="Regular;20" halign="left" backgroundColor="black" zPosition="1" transparent="1" />
-	<widget name="myMenu" position="20,10" size="760,330" scrollbarMode="showOnDemand" itemHeight="30" transparent="1"/>
-</screen>
