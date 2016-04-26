@@ -658,7 +658,7 @@
   <widget source="session.MSNWeather" render="Label" position="556,35" size="90,40" font="Regular; 24" halign="left" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="2">
     <convert type="MSNWeather">temperature_current</convert>
   </widget>
-  <ePixmap position="643,38" size="60,28" pixmap="oDreamy/icons/wind.png" alphatest="blend" zPosition="1" />
+  <ePixmap position="643,38" size="60,28" pixmap="oDreamy/msn_weather_icons/wind.png" alphatest="blend" zPosition="1" />
   <widget source="session.MSNWeather" render="Label" position="705,38" size="150,30" font="Regular; 24" halign="left" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="2">
     <convert type="MSNWeather">winddisplay</convert>
 		</widget>
