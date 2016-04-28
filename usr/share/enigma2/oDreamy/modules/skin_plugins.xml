@@ -1345,7 +1345,7 @@
 		<widget source="global.CurrentTime" render="Label" font="Regular; 16" position="968,44" size="161,29" zPosition="2" halign="right" backgroundColor="transpBlack" transparent="1">
 			<convert type="ClockToText">Format:%e. %b</convert>
 		</widget>
-		<ePixmap position="21,670" size="53,25" pixmap="oDreamy/buttons/key_menu.png" alphatest="blend" zPosition="1" />
+		<ePixmap position="1175,44" size="70,40" pixmap="oDreamy/buttons/key_menu.png" alphatest="blend" zPosition="1" />
 		<!--eLabel name="Debug" text="P016A" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
 	
