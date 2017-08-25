@@ -360,7 +360,19 @@
 		<!--eLabel name="Debug" text="S018" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen> 
 
-	<!-- Info About  -->
+
+	<!-- About HD -->
+	<screen name="CommitInfo" position="fill" title="About Team" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="p800_Template"/>
+		<panel name="p800_Logo"/>
+		<panel name="p800_DateMid"/>
+		<panel name="sR"/>
+                <widget name="AboutScrollLabel" position="70,200" size="820,720" itemHeight="45" font="Regular;30" backgroundColor="header" transparent="1"/>
+                <ePixmap position="960,640" size="300,300" pixmap="menu/ico_opendroid.png" alphatest="blend"/>
+		<!-- eLabel name="DEBUG" text="S101" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- Info About OE -->
 	<screen name="AboutOE" title="Image Information" position="fill" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="p800_Template"/>
 		<panel name="p800_Logo"/>
@@ -408,15 +420,6 @@
 		<widget name="HelpWindow" position="80,450" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
 		<widget name="footnote" position="840,580" size="400,30" font="Regular;22" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
 		<!--eLabel name="Debug" text="S020" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
-	</screen>
-       <!-- Infopanel OK -->
-	<screen name="Infopanel" position="fill" title="info panel" backgroundColor="#FF000000" flags="wfNoBorder" >
-		<panel name="p800_Template" />
-		<panel name="p800_Logo" />
-                <widget name="Mlist" position="70,110" size="540,610" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
-                <ePixmap position="40,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
-                <ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
-		<!-- eLabel name="DEBUG"  text="INFO PANEL PA021" position="40,25" size="500,50" font="Regular;40" backgroundColor="#10000000" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
 	<!-- Main infobar -->
 	<screen name="InfoBar" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
