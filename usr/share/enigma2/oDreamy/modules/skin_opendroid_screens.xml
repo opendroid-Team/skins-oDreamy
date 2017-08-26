@@ -11,20 +11,21 @@
 	<!--  OPENDROID SCREENS OKK -->
 		<screen name="OPD_panel" position="fill" title="Panel - Main Menu" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="p800_Template" />
-		<panel name="p800_Logo" />
+		<panel name="p800_Date" />
 		<panel name="p800_Ext" />
-		<panel name="nRG"/>
-		<!-- Date -->
-		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
-			<convert type="ClockToText">Format %A %B %d</convert>
-		</widget>
-		<ePixmap position="605,70" size="230,425" pixmap="oDreamy/menu/opendroidlogo.png" alphatest="blend" zPosition="1" />
-		<ePixmap pixmap="oDreamy/menu/ico_opendroid.png" position="640,440" size="256,256" zPosition="2" alphatest="blend" />
-		<ePixmap position="600,100" size="10,500" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
-		<widget name="Mlist" position="50,100" size="560,500" scrollbarMode="showOnDemand" transparent="1"/>
-		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend" backgroundColor="header" transparent="1" />
-		<widget name="label1" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
-		<widget name="label1" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<ePixmap position="950,250" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
+                <widget name="Mlist" position="30,100" size="600,450" itemHeight="50" font="Regular; 22" scrollbarMode="showOnDemand" transparent="1" />
+                <widget name="label1" position="905,130" size="300,540" font="Regular;22" halign="center" valign="top" foregroundColor="white" transparent="1" zPosition="1" />
+                <widget name="labelExitsave" position="838,1018" size="420,40" halign="center" font="Regular; 20" transparent="1" foregroundColor="white" />
+                <widget name="label2" position="30,108" size="880,40" font="Regular; 22" transparent="1" halign="center" foregroundColor="white" />
+		
+                </screen>
+       <!--   Info  -->
+		<screen name="Info" position="fill" title="Panel - Main Menu" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="p900_Template" />
+		<panel name="p900_Date" />
+                <widget name="label2" position="50,10" foregroundColor="white" size="875,100" valign="bottom" font="Regular;24" backgroundColor="background" transparent="1" />
+                <widget name="label1" position="50,100" size="875,550" font="Regular;22" zPosition="1" transparent="1" backgroundColor="background" foregroundColor="white" />
 		<!-- eLabel name="DEBUG"  text="E001" position="40,40" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
