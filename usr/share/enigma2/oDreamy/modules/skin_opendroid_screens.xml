@@ -34,7 +34,6 @@
 	<!--  OPENDROID EmuManager OKK -->
 	<screen name="BluePanel" position="fill"  title="OPENDROID Blue Panel" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="p800_Template" />
-		<panel name="p800_Logo" />
 		<panel name="p800_Date" />
 		<panel name="nRGYB"/>
 		<ePixmap position="50,100" zPosition="3" size="83,95" pixmap="oDreamy/icons/emupic.png" alphatest="blend" transparent="1" />
