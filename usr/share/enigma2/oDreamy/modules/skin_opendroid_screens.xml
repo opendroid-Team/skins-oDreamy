@@ -54,32 +54,78 @@
 		<widget name="lb_videosize"   position="120,300" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
 		<ePixmap pixmap="eDreamy/icons/inet.png" position="50,335" size="90,55" alphatest="blend" zPosition="2" />
 		<widget name="ecminfo" position="120,390" size="480,225" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="header" transparent="1"/>
+				<panel name="p700_Template"/>
+		<widget name="list" position="50,100" size="675,340" scrollbarMode="showOnDemand" itemHeight="26" backgroundColor="header" transparent="1" zPosition="1" />
+		<widget name="text" position="50,540" size="675,160" halign="left" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+		<ePixmap position="50,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+		<eLabel position="830,200" size="415,421" backgroundColor="un10101010" zPosition="-10" />
+		<widget font="Regular; 22" backgroundColor="black" halign="left" position="900,218" render="Label" size="333,32" source="session.CurrentService" transparent="1" foregroundColor="white" zPosition="6">
+			<convert type="BoxInfo">Uptime</convert>
+		</widget>
+		<ePixmap position="840,209" size="50,50" zPosition="3" pixmap="oDreamy/icons/net1.png" alphatest="blend" />
+		<ePixmap position="840,274" zPosition="1" size="50,50" pixmap="oDreamy/icons/cpu_1.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" position="900,274" size="333,8" foregroundColor="ltbluette" backgroundColor="black" transparent="1" borderColor="bluette" borderWidth="1" zPosition="6">
+			<convert type="CpuUsage">$0</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="900,286" size="333,38" font="Regular; 16" halign="left" valign="center" transparent="0" zPosition="6" foregroundColor="yellow" backgroundColor="black">
+			<convert type="CpuUsage">CPU Utilization:$0 (Core #1: $1, Core #2: $2)</convert>
+		</widget>
+		<ePixmap position="840,331" zPosition="1" size="50,50" pixmap="oDreamy/icons/ram_1.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" position="900,346" size="333,8" foregroundColor="ltbluette" backgroundColor="black" transparent="1" borderColor="bluette" borderWidth="1" zPosition="6">
+			<convert type="pliLayoutInfo">MemTotal</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" zPosition="6" position="900,354" size="333,26" halign="left" valign="center" font="Regular; 16" transparent="0" foregroundColor="yellow" backgroundColor="black">
+			<convert type="pliLayoutInfo">MemTotal</convert>
+		</widget>
+		<ePixmap position="840,388" zPosition="1" size="50,50" pixmap="oDreamy/icons/swap_1.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" foregroundColor="ltbluette" backgroundColor="black" position="900,403" size="333,8" transparent="1" borderColor="bluette" borderWidth="1" zPosition="6">
+			<convert type="pliLayoutInfo">SwapTotal</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" zPosition="6" position="900,415" size="333,26" halign="left" valign="center" font="Regular; 16" transparent="0" foregroundColor="yellow" backgroundColor="black">
+			<convert type="pliLayoutInfo">SwapTotal</convert>
+		</widget>
+		<ePixmap position="840,448" zPosition="1" size="50,50" pixmap="oDreamy/icons/flash1.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" position="900,468" size="333,8" foregroundColor="ltbluette" backgroundColor="black" transparent="1" borderColor="bluette" borderWidth="1" zPosition="6">
+			<convert type="pliLayoutInfo">FleshInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" zPosition="6" position="900,478" size="333,26" halign="left" valign="center" font="Regular; 16" transparent="0" foregroundColor="yellow" backgroundColor="black">
+			<convert type="pliLayoutInfo">Flesh</convert>
+		</widget>
+		<ePixmap position="840,507" zPosition="1" size="50,50" pixmap="oDreamy/icons/hdd_1.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" foregroundColor="ltbluette" backgroundColor="black" position="900,523" size="333,8" transparent="1" borderColor="bluette" borderWidth="1" zPosition="6">
+			<convert type="pliLayoutInfo">HddInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" zPosition="6" position="900,533" size="333,26" halign="left" valign="center" font="Regular; 16" transparent="0" foregroundColor="yellow" backgroundColor="black">
+			<convert type="pliLayoutInfo">HddInfo</convert>
+		</widget>
+		<ePixmap position="840,565" zPosition="1" size="50,50" pixmap="oDreamy/icons/usb_1.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" foregroundColor="ltbluette" backgroundColor="black" position="900,578" size="333,8" transparent="1" borderColor="bluette" borderWidth="1" zPosition="6">
+			<convert type="pliLayoutInfo">UsbInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" zPosition="6" position="900,588" size="333,26" halign="left" valign="center" font="Regular; 16" transparent="0" foregroundColor="yellow" backgroundColor="black">
+		  <convert type="pliLayoutInfo">UsbInfo</convert>
+		</widget>
 		<!-- eLabel name="DEBUG" text="PE002" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
 
 	<!-- SoftCam Panel Install --> 
 	<screen name="ShowSoftcamPackages" position="fill" title="Install Softcams" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="p800_Template" />
-		<panel name="p800_Ext" />
-		<panel name="sRGYB"/>
-		<!-- Date -->
-		<widget source="global.CurrentTime" render="Label" position="830,32" size="400,40" font="Regular;26" halign="right" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1" >
-			<convert type="ClockToText">Format %A %B %d</convert>
-		</widget>
-		<ePixmap position="950,100" size="300,300" pixmap="menu/info_screen.png" alphatest="blend"/>
-		<widget name="header" position="840,280" size="400,310" font="Regular;22" halign="center" valign="top" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="1"/>
-		<ePixmap position="805,100" size="10,495" pixmap="oDreamy/box/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
-		<widget source="list" render="Listbox" position="50,100" size="765,495" scrollbarMode="showOnDemand" transparent="1">
-			<convert type="TemplatedMultiContent" transparent="0">
-				{"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (5, 4), size = (50, 50), png = 2), # index 4 is the status pixmap
-					MultiContentEntryText(pos = (65, 6), size = (700, 44), font=0, color=0xdddddd, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
-					],
-					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
-					"itemHeight": 55
-				}
-			</convert>
+		<panel name="p800_Template"/>
+		<panel name="p800_Logo"/>
+		<panel name="p800_Date" />
+		<panel name="sRG"/> 
+		<widget source="list" render="Listbox" position="50,100" size="560,500" scrollbarMode="showOnDemand" transparent="1">
+			  <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (125, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (125, 24), size = (650, 24), font=1, color = 0x6da6ff, text = 1),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (100, 40), png = 2),
+			      ],
+			      "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+			      "itemHeight": 50
+			      }
+			  </convert>
 		</widget>
 		<!-- eLabel name="DEBUG"  text="PANEL E003" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
