@@ -759,7 +759,7 @@
 		<eLabel position="830,78" size="415,1"   backgroundColor="#10202020" zPosition="0" />
 		<!-- Service Name -->
 		<widget source="ServiceEvent" render="Picon" position="835,85" size="130,80" zPosition="1" alphatest="blend" transparent="1" >
-			<convert type="RefString">ServicelistRef</convert>
+			<convert type="ODRefString">ServicelistRef</convert>
 		</widget>
 		<!-- Event Name - Time -->
 		<eLabel text="Start Time :" position="975,95" size="120,24" font="Regular;22" backgroundColor="#101010" foregroundColor="yellow" transparent="1" zPosition="1" />
