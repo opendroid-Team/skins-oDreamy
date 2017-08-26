@@ -34,6 +34,7 @@
 	<!--  OPENDROID EmuManager OKK -->
 	<screen name="BluePanel" position="fill"  title="OPENDROID Blue Panel" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="p800_Template" />
+		<panel name="p800_Logo"/>
 		<panel name="p800_Date" />
 		<panel name="nRGYB"/>
 		<ePixmap position="50,100" zPosition="3" size="83,95" pixmap="oDreamy/icons/emupic.png" alphatest="blend" transparent="1" />
@@ -53,10 +54,9 @@
 		<widget name="lb_videosize"   position="120,300" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
 		<ePixmap pixmap="eDreamy/icons/inet.png" position="50,335" size="90,55" alphatest="blend" zPosition="2" />
 		<widget name="ecminfo" position="120,390" size="480,225" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="header" transparent="1"/>
-				<panel name="p700_Template"/>
 		<widget name="list" position="50,100" size="675,340" scrollbarMode="showOnDemand" itemHeight="26" backgroundColor="header" transparent="1" zPosition="1" />
 		<widget name="text" position="50,540" size="675,160" halign="left" font="Regular;22" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
-		<ePixmap position="50,648"  size="350,44"  pixmap="oDreamy/icons/opendroid_logo.png"  alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="oDreamy/menu/camcenter.png" position="640,440" size="300,300" zPosition="2" alphatest="blend" />
 		<eLabel position="830,200" size="415,421" backgroundColor="un10101010" zPosition="-10" />
 		<widget font="Regular; 22" backgroundColor="black" halign="left" position="900,218" render="Label" size="333,32" source="session.CurrentService" transparent="1" foregroundColor="white" zPosition="6">
 			<convert type="BoxInfo">Uptime</convert>
@@ -113,7 +113,8 @@
 		<panel name="p800_Template"/>
 		<panel name="p800_Logo"/>
 		<panel name="p800_Date" />
-		<panel name="sRG"/> 
+		<panel name="sRG"/>
+		<ePixmap pixmap="oDreamy/menu/camcenter.png" position="640,440" size="300,300" zPosition="2" alphatest="blend" /> 
 		<widget source="list" render="Listbox" position="50,100" size="560,500" scrollbarMode="showOnDemand" transparent="1">
 			  <convert type="TemplatedMultiContent">
 			      {"template": [
