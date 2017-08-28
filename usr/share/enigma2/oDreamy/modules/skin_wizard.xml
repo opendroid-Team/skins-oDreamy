@@ -37,7 +37,7 @@
 		</widget>
 		<ePixmap position="50,658"  pixmap="oDreamy/buttons/redpanel.png" size="22,22" alphatest="blend" zPosition="2" />
 		<widget name="languagetext" position="90,642"  size="180,55" zPosition="1" font="Regular;22" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bluette" transparent="1" />
-		<!--<widget name="portpic" position="45,343" size="40,40" zPosition="2" alphatest="on" transparent="1"/>-->
+		<widget name="portpic" position="45,343" size="40,40" zPosition="2" alphatest="on" transparent="1"/>
 		<!--eLabel name="DEBUG" text="W001" position="40,25" size="500,50" font="Regular;40" backgroundColor="#102e59" foregroundColor="#bc0004" transparent="1" zPosition="99"/-->
 	</screen>
 
