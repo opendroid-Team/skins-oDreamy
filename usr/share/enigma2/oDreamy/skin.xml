@@ -916,7 +916,7 @@
 		<eLabel position="45,470" size="770,1" backgroundColor="#404040"/>
 		<!-- Service Name -->
 		<widget source="ServiceEvent" render="Picon" position="45,480" size="130,80" zPosition="1" alphatest="blend" transparent="1" >
-			<convert type="RefString">ServicelistRef</convert>
+			<convert type="ODRefString">ServicelistRef</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="45,570" size="60,25" font="Regular; 22" foregroundColor="#ffffff" backgroundColor="#10101010" noWrap="1" transparent="1" zPosition="2" >
 			<convert type="EventTime">StartTime</convert>
