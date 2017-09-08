@@ -43,7 +43,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/ico_ci.png"               position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
-			<convert type="MenuEntryCompare">emu</convert>
+			<convert type="MenuEntryCompare">cam</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/ico_ci.png"               position="550,435" size="256,256" alphatest="blend" transparent="1" zPosition="2" >
@@ -91,7 +91,15 @@
 			<convert type="ConditionalShowHide" /> 
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="oDreamy/menu/startboot.png"             position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
-			<convert type="MenuEntryCompare">OpendroidMainPanel_summary</convert>
+			<convert type="MenuEntryCompare">OPD_panel_summary</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+                <widget source="menu" render="Pixmap" pixmap="oDreamy/menu/plugin_selection.png"             position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">Green Panel</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+                <widget source="menu" render="Pixmap" pixmap="oDreamy/menu/camcenter.png"             position="550,435" size="380,256" alphatest="blend" transparent="1" zPosition="2" >
+			<convert type="MenuEntryCompare">Blue Panel</convert>
 			<convert type="ConditionalShowHide" /> 
 		</widget>
 	</screen>
@@ -112,6 +120,18 @@
 	<screen name="menu_setup" position="fill" title="Main Menu Setup" backgroundColor="#FF000000" flags="wfNoBorder" >
 		<panel name="MenuTemplate" />
 		<ePixmap pixmap="oDreamy/menu/setup_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+         
+        <!-- Menu BluePanel DRE -->
+	<screen name="menu_BluePanel" position="fill" title="Main Menu EmuManager" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/camcenter.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
+	</screen> 
+ 
+        <!-- Menu BluePanel DRE -->
+	<screen name="menu_GreenPanel" position="fill" title="Main Menu GreenPanel" backgroundColor="#FF000000" flags="wfNoBorder" >
+		<panel name="MenuTemplate" />
+		<ePixmap pixmap="oDreamy/menu/plugin_selection.png" position="550,435" size="256,256" zPosition="2" alphatest="blend" />
 	</screen>
 	
 	<!-- Menu Scan Channel DRE -->
