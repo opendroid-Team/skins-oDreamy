@@ -447,7 +447,7 @@
 		</widget>
 		<!-- Sat Name Info -->
 		<widget source="session.CurrentService" render="Label" position="1110,23" size="110,22" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="2">
-			<convert type="PliExtraInfo">TransponderName</convert>
+			<convert type="OPDPliExtraInfo">TransponderName</convert>
 		</widget>
 		<!-- Provider Name -->
 		<widget source="session.CurrentService" render="Label" position="975,23" size="110,22" font="Regular;20" halign="left" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="2">
